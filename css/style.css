@@ -9395,12 +9395,72 @@ textarea.form-control {
     transform: translateY(-6px);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
     border-color: rgba(62, 100, 255, 0.3); }
-  .link-card:hover:before {
-    opacity: 1; }
+.link-card:hover:before {
+  opacity: 1; }
 
 @media (max-width: 767.98px) {
   .link-card {
     margin-bottom: 20px; } }
+
+.action-area {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center; }
+
+.content-header {
+  position: relative;
+  width: 100%;
+  padding-right: 120px; }
+
+.content-header .header-meta h4 {
+  margin-bottom: 6px; }
+
+.youtube-btn {
+  background: #ff0033;
+  border: 0;
+  color: #ffffff;
+  box-shadow:  none; }
+
+.youtube-btn:hover,
+.youtube-btn:focus,
+.youtube-btn:active,
+.youtube-btn:focus:active {
+  background: #e0002d;
+  border: 0;
+  color: #ffffff;
+  box-shadow:  none; }
+
+.github-btn {
+  background: #111111;
+  border: 0;
+  color: #ffffff;
+  box-shadow: none; }
+
+.github-btn:hover,
+.github-btn:focus,
+.github-btn:active,
+.github-btn:focus:active {
+  background: #000000;
+  border: 0;
+  color: #ffffff;
+  box-shadow: none; }
+
+.lab-btn {
+  background: #1e2db8;
+  border: 0;
+  color: #ffffff;
+  box-shadow: none; }
+
+.lab-btn:hover,
+.lab-btn:focus,
+.lab-btn:active,
+.lab-btn:focus:active {
+  background: #1f0182;
+  border: 0;
+  color: #ffffff;
+  box-shadow: none; }
 
 .block-23 ul {
   padding: 0; }
