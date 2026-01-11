@@ -9335,18 +9335,72 @@ textarea.form-control {
         color: #000000; }
         .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
           color: #3e64ff; }
-  .blog-entry .meta {
-    display: inline-block;
-    margin-right: 5px;
-    margin-bottom: 0;
-    font-size: 16px;
-    font-weight: 600; }
-    .blog-entry .meta span {
+.blog-entry .meta {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 600; }
+  .blog-entry .meta span {
+    color: #3e64ff; }
+  .blog-entry .meta a {
+    color: #3e64ff; }
+    .blog-entry .meta a:hover {
       color: #3e64ff; }
-    .blog-entry .meta a {
-      color: #3e64ff; }
-      .blog-entry .meta a:hover {
-        color: #3e64ff; }
+
+.link-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+  .link-card:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(62, 100, 255, 0.12), rgba(0, 0, 0, 0));
+    opacity: 0;
+    transition: opacity 0.25s ease; }
+  .link-card .icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: rgba(62, 100, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3e64ff;
+    position: relative;
+    z-index: 1; }
+  .link-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1; }
+  .link-card p {
+    color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1; }
+  .link-card .btn {
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1; }
+  .link-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(62, 100, 255, 0.3); }
+  .link-card:hover:before {
+    opacity: 1; }
+
+@media (max-width: 767.98px) {
+  .link-card {
+    margin-bottom: 20px; } }
 
 .block-23 ul {
   padding: 0; }
@@ -9397,29 +9451,43 @@ textarea.form-control {
 .contact-section .box {
   width: 100%;
   display: block;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px; }
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
   @media (max-width: 991.98px) {
     .contact-section .box {
       margin-bottom: 30px; } }
   .contact-section .box .icon {
-    width: 100px;
-    height: 100px;
-    background: #3e64ff;
+    width: 72px;
+    height: 72px;
+    background: rgba(62, 100, 255, 0.12);
     margin: 0 auto;
     margin-bottom: 10px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
-    border-radius: 50%; }
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     .contact-section .box .icon span {
-      color: #fff;
-      font-size: 30px; }
+      color: #3e64ff;
+      font-size: 26px; }
   .contact-section .box h3 {
     font-size: 18px;
     font-weight: 600; }
+  .contact-section .box p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    word-break: keep-all; }
+  .contact-section .box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(62, 100, 255, 0.3); }
 
 .contact-section .contact-form {
   width: 100%; }
@@ -9432,7 +9500,11 @@ textarea.form-control {
       height: 500px; } }
 
 .contact-section .contact-info p a {
-  color: #3e64ff; }
+  color: #3e64ff;
+  transition: color 0.2s ease; }
+  .contact-section .contact-info p a:hover {
+    color: #1a1a1a;
+    text-decoration: underline; }
 
 .contact-section .contact-form {
   width: 100%; }
