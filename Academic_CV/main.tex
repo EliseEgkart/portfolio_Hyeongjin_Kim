@@ -1,0 +1,685 @@
+% ==============================================================================
+% Academic CV LaTeX Template (Uniform Spacing Version)
+%
+% Design Goals:
+% - Consistent spacing across ALL sections
+% - No manual \vspace inside content blocks (except where explicitly intended)
+% - Section spacing controlled ONLY via titlesec
+% - List spacing controlled ONLY via enumitem
+% - No hidden spacing inside custom list macros
+% ==============================================================================
+
+\documentclass[a4paper,11pt]{article}
+
+% ==============================================================================
+% 0) Package Imports
+%    - Core typesetting, layout, and CV utilities
+% ==============================================================================
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+
+\usepackage[empty]{fullpage}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{lipsum}
+\usepackage{marvosym}
+\usepackage{cfr-lm}
+
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+
+% ==============================================================================
+% 1) Global Style and Page Layout
+% ==============================================================================
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Hyperlink styling (CV-safe)
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Page margins (tight CV layout)
+\geometry{
+  left=1.4cm,
+  right=1.2cm,
+  top=0.8cm,
+  bottom=1cm
+}
+
+% Header / footer configuration (no rules)
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{5pt}
+
+% Global paragraph and table spacing
+\setlength{\multicolsep}{0pt}
+\raggedright
+\setlength{\tabcolsep}{0in}
+\urlstyle{same}
+
+% ==============================================================================
+% 2) Section Title Style and Uniform Spacing
+% ==============================================================================
+\titleformat{\section}{
+  \scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule]
+
+% Section spacing: {left}{before}{after}
+\titlespacing*{\section}{0pt}{8pt}{6pt}
+
+% ==============================================================================
+% 3) Global List Spacing (itemize / enumerate)
+% ==============================================================================
+\setlist[itemize]{leftmargin=*, labelsep=1mm, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0.6mm}
+\setlist[enumerate]{leftmargin=*, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0.6mm}
+
+% Custom bullet symbols
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+% ==============================================================================
+% 4) tcolorbox Defaults (not used in final CV, kept for extensibility)
+% ==============================================================================
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt, right=0pt, top=0pt, bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt, outer arc=0pt,
+}
+
+% ==============================================================================
+% 5) Column Type Definitions
+% ==============================================================================
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+% ==============================================================================
+% 6) Icon Helpers
+% ==============================================================================
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% ==============================================================================
+% 7) Font Presets (optional experimentation)
+% ==============================================================================
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont}
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont}
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont}
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont}
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont}
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont}
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont}
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont}
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont}
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont}
+
+% ==============================================================================
+% 8) Reusable CV Macros (NO internal spacing hacks)
+% ==============================================================================
+\newcommand{\resumeItem}[2]{%
+  \item{\textbf{#1}\hspace{0.5mm}#2}%
+}
+
+% Position / Organization / Date entry
+\newcommand{\resumePOR}[3]{%
+\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}}
+    \end{tabular*}
+}
+
+% Subheading with institution, location, role, and period
+\newcommand{\resumeSubheading}[4]{%
+\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} & \footnotesize{#2}\\
+    \end{tabular*}
+}
+
+% Project-style entry with title, organization, date, and extra field
+\newcommand{\resumeProject}[4]{%
+\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+}
+
+% List wrappers (spacing handled globally)
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% ==============================================================================
+% 9) Document Body
+% ==============================================================================
+\begin{document}
+\headerfontiii
+% ==============================================================================
+% Header
+% - Two-column layout using minipage:
+%   (1) Photo area (left)
+%   (2) Name + contacts + links (right)
+% ==============================================================================
+\noindent
+\begin{minipage}[t]{0.22\textwidth}
+  % Top align the photo block
+  \vspace{0pt}
+  \centering
+  % Horizontal adjustment for photo placement (kept as-is)
+  \mbox{\hspace{25mm}\includegraphics[width=3.0cm,height=3.0cm,keepaspectratio]{author1.pdf}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.76\textwidth}
+  % Vertical offset for header text block (kept as-is)
+  \vspace{13pt}
+  \begin{center}
+    % Name
+    {\Huge\textbf{Hyeongjin Kim}}\\[1.6mm]
+
+    % Phone / Email
+    \small{+82 10 3187 9925 \,|\, \href{mailto:ky942400@gmail.com}{ky942400@gmail.com}}\\[0.8mm]
+
+    % Social links (icons + hyperlinks)
+    \small{
+      \socialicon{\faYoutube} \href{https://www.youtube.com/@Hyeongjin-kim}{@Hyeongjin-kim} \,|\, 
+      \socialicon{\faGithub} \href{https://github.com/EliseEgkart}{EliseEgkart} \,|\, 
+      \socialicon{\faGlobe} \href{https://eliseegkart.github.io/portfolio_Hyeongjin_Kim/}{Web Portfolio}
+    }\\[0.8mm]
+
+    % Location
+    \small{Incheon, Republic of Korea}
+  \end{center}
+\end{minipage}
+
+% ==============================================================================
+% Profile
+% - Short summary paragraph (kept as-is)
+% ==============================================================================
+\section{\textbf{Profile}}
+\small{
+Robotics, autonomous driving, and embedded systems engineer with hands-on experience across the full stack from hardware to software.
+Strong background in ROS 2–based robotic systems, sensor fusion, communication system design, and embedded firmware development.
+Experienced in implementing real-world systems that operate reliably under practical constraints, with a strong interest in bridging research and deployment to create socially impactful technologies.
+}
+
+% ==============================================================================
+% Education
+% - Uses: \resumeSubheading + nested item list for details
+% ==============================================================================
+\section{\textbf{Education}}
+\resumeSubHeadingListStart
+
+  % --- University
+  \resumeSubheading
+  {Incheon National University}{Incheon, Republic of Korea}
+  {B.S. in Embedded Systems Engineering}{Mar. 2021 -- Present}
+  \resumeItemListStart
+    \item GPA: 4.26 / 4.5 \hfill (131 / 140 credits completed)
+  \resumeItemListEnd
+
+  % Manual spacing between entries (kept as-is)
+  \vspace{0.5em}
+
+  % --- Program
+  \resumeSubheading
+  {Hyundai H-Mobility Class}{Republic of Korea}
+  {Autonomous Driving Track (Advanced Communication \& Networking)}{Apr. 2025 -- Jul. 2025}
+  \resumeItemListStart
+    \item Completed coursework in perception, decision-making, control, and communication.
+    \item ROS 2–based autonomous driving training / CAN, LIN, Ethernet, and V2X communication
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ==============================================================================
+% Publications and Presentations
+% - enumerate list with custom item spacing (kept as-is)
+% ==============================================================================
+\section{\textbf{Publications and Presentations}}
+\small{
+  \begin{enumerate}[itemsep=0.8em]
+
+    \item H. Kim, H. Kim, and M. Guizani,
+    \textbf{``A Resting Drone-enabled Surveillance Framework for Real-time \\ Monitoring with Resource Efficiency in IoT-based Smart Cities,''}
+    \textit{IEEE Internet of Things Journal}, Aug. 2025.
+
+    \item H. Kim and H. Kim,
+    \textbf{``Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies \\for Outdoor Autonomous Driving Platforms in ITS Environments,''}
+    Proc. of KICS Fall Conf., Oct. 2025. (Oral)
+
+    \item H. Kim, M. Kim, and H. Kim,
+    \textbf{``Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication,''}
+    Proc. of KICS Fall Conf., Oct. 2024. (Poster)
+
+  \end{enumerate}
+}
+
+% ==============================================================================
+% Research and Professional Experience
+% - Single lab entry + bullet list (kept as-is)
+% ==============================================================================
+\section{\textbf{Research and Professional Experience}}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+  {ICONS Laboratory}{Incheon, Republic of Korea}
+  {Undergraduate Researcher (Advisor: Prof. Hyunbum Kim)}{Mar. 2024 -- Present}
+  \resumeItemListStart
+    \item Investigated network optimization and resource efficiency in UAV-assisted ITS systems
+    \item Investigated IoT platform--based decision-making architectures in distributed system environments
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ==============================================================================
+% Leadership & Ambassador Activities
+% - Project-style entries with bullet descriptions
+% ==============================================================================
+\section{\textbf{Leadership \& Ambassador Activities}}
+\resumeSubHeadingListStart
+
+  \resumeProject
+  {Autonomous Driving Track Ambassador, Hyundai H-Mobility Class}
+  {Hyundai Motor Group}
+  {Apr. 2025 -- Jul. 2025}
+  {}
+  \resumeItemListStart
+    \item Selected as an Autonomous Driving Track ambassador and produced \\weekly educational summary content and promotional materials for the program.
+  \resumeItemListEnd
+
+  % Manual spacing between entries (kept as-is)
+  \vspace{0.5em}
+
+  \resumeProject
+  {President, UNITA Robotics \& Mobility Club (3rd Cohort)}
+  {Incheon National University}
+  {Jan. 2026 -- Present}
+  {}
+  \resumeItemListStart
+    \item Designed, lectured, and led a ROS 2–based autonomous robotics curriculum, \\incorporating quizzes, student presentations, and hands-on projects.
+  \resumeItemListEnd
+
+  \vspace{0.5em}
+
+  \resumeProject
+  {President, UNITA Robotics \& Mobility Club (2nd Cohort)}
+  {Incheon National University}
+  {Apr. 2025 -- Dec. 2025}
+  {}
+  \resumeItemListStart
+    \item Led an autonomous mobility competition team and developed a sensor fusion--based \\autonomous driving system using 3D LiDAR, cameras, GNSS-RTK and IMU
+  \resumeItemListEnd
+
+  \vspace{0.5em}
+
+  \resumeProject
+  {Member, Startup Club ``Greedon Green''}
+  {Incheon National University}
+  {Jul. 2023 -- Dec. 2023}
+  {}
+  \resumeItemListStart
+    \item Developed ESP32-based firmware for an automated tanghulu manufacturing machine,\\ implementing OLED UI, hardware interface design
+    , and motor control logic.
+  \resumeItemListEnd
+
+  \vspace{0.5em}
+
+  \resumeProject
+  {Class Representative, Embedded Systems Engineering (1st--6th Semesters)}
+  {Incheon National University}
+  {Mar. 2021 -- Dec. 2026}
+  {}
+  \resumeItemListStart
+    \item Disseminated department announcements and shared opportunities for competitions, conferences, and programs.
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ==============================================================================
+% Honors and Awards
+% - Award entries listed as projects (title/issuer/date/extra field)
+% ==============================================================================
+\section{\textbf{Awards}}
+\resumeSubHeadingListStart
+
+  \resumeProject
+  {Outstanding Learner Award, Hyundai H-Mobility Class}
+  {Hyundai Motor Group R\&D Division Head Award}
+  {Jul. 2025}
+  {}
+  \vspace{0.3em}
+
+  \resumeProject
+  {Grand Prize, Homemade Electric Vehicle Competition}
+  {Future Automotive Convergence Innovation Center Director Award, Incheon National University}
+  {Dec. 2025}
+  {Role: Team leader}
+  \vspace{0.3em}
+
+  \resumeProject
+  {Special Prize, National Creative Capstone Design Competition}
+  {Korea Technopark Promotion Association President Award}
+  {Nov. 2024}
+  {Role: Team leader}
+  \vspace{0.3em}
+
+  \resumeProject
+  {Bronze Prize, Sungkyunkwan University Consortium Creative Capstone Design Competition}
+  {Engineering Education Innovation Center Director Award, Sungkyunkwan University}
+  {Nov. 2024}
+  {Role: Team leader}
+  \vspace{0.3em}
+
+  \resumeProject
+  {Grand Prize, Incheon National University Creative Capstone Design Competition}
+  {Incheon National University President Award}
+  {Sep. 2024}
+  {Role: Team leader}
+  \vspace{0.3em}
+
+  \resumeProject
+  {Grand Prize, Software Contest}
+  {College of Information Technology Dean’s Award, Incheon National University}
+  {Dec. 2023}
+  {Role: Team leader}
+  \vspace{0.3em}
+
+  \resumeProject
+  {Grand Prize, INU Maker Competition}
+  {Incheon National University President Award}
+  {Jan. 2022}
+  {Role: Team leader}
+  \vspace{0.3em}
+
+  \resumeProject
+  {Honorable Mention, Smart Mobility Competition}
+  {Engineering Education Innovation Center Director Award, Incheon National University}
+  {Dec. 2021}
+  {Role: Team leader}
+  \vspace{0.3em}
+
+  \resumeProject
+  {Bronze Prize, INU Autonomous Driving Software Competition}
+  {College of Information Technology Dean’s Award, Incheon National University}
+  {Nov. 2021}
+  {Role: Team member}
+  \vspace{0.3em}
+
+\resumeSubHeadingListEnd
+
+% ==============================================================================
+% Core Tools I Use Daily
+% - Centered one-line description + centered technology list
+% ==============================================================================
+\section{\textbf{Core Tools I Use Daily}}
+\begin{center}
+  \small Core technologies frequently used in my research and development work.
+\end{center}
+
+% Manual vertical compaction (kept as-is)
+\vspace{-2em}
+
+\begin{center}
+  \small{
+    ROS 2 \,|\, C/C++ \,|\, Python \,|\, Arduino (Framework) \,|\, Linux (Ubuntu) \,|\, Git/GitHub \,|\, Markdown  \,|\, LaTeX
+  }
+\end{center}
+
+% ==============================================================================
+% Projects
+% - Project entries + role/stack/features list
+% ==============================================================================
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+  \resumeProject
+  {Last-Mile Delivery Robot (Capstone Design)}
+  {}
+  {Sep. 2025 -- Present}
+  {}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \item \textbf{Role}: Team leader
+    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
+    \item \textbf{Key Features}:
+    \begin{itemize}[leftmargin=1.2em]
+      \item Autonomous navigation and path planning
+      \item Obstacle avoidance and safety logic
+      \item End-to-end system integration for real-world delivery
+    \end{itemize}
+  \resumeItemListEnd
+  \vspace{0.5em}
+
+\resumeSubHeadingListEnd
+
+% ==============================================================================
+% End of document
+% ==============================================================================
+\end{document}
+
