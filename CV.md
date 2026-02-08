@@ -1,8 +1,10 @@
 # 김형진 (Hyeongjin Kim)
 로보틱스 · 자율주행 · 임베디드 시스템 엔지니어
 
+
 ## 프로필
 로봇·자율주행·임베디드 시스템을 중심으로 하드웨어부터 소프트웨어까지 전 과정을 다루는 엔지니어입니다. ROS2 기반 로보틱스·자율주행, 센서 융합, 통신 시스템 설계, 임베디드 프로젝트 경험을 바탕으로 실제 환경에서 동작하는 시스템 구현에 강점을 가지고 있으며, 문제를 구조적으로 정의하고 끝까지 구현하며 개선하는 과정 자체를 즐깁니다. 연구와 실무의 경계를 넘나들며 사회적 가치를 만드는 기술을 목표로 성장하고 있습니다.
+
 
 ## 연락처
 - 이메일: ky942400@gmail.com
@@ -11,6 +13,7 @@
 - GitHub: github.com/EliseEgkart
 - YouTube: youtube.com/@Hyeongjin-kim
 
+
 ## 관심/전문 분야
 - ROS 2 기반 로보틱스 및 자율주행
 - 센서 융합
@@ -18,10 +21,12 @@
 - 임베디드 시스템
 - 드론 · 모빌리티
 
+
 ## 학력
 - 2021 – 현재: 인천대학교 임베디드시스템공학 전공 (학부)
   - GPA: 4.32/4.5 (131/140 졸업학점)
 - 2025.04 – 2025.07: 현대 H-Mobility Class (자율주행 Track, 통신·네트워크 심화)
+
 
 ## 논문/발표
 - 2025.08.15: "A Resting Drone-enabled Surveillance Framework for Real-time Monitoring with Resource Efficiency in IoT-based Smart City"
@@ -34,6 +39,7 @@
 - 2024.09: "저전력 근거리 통신 기반 ITS 환경에서의 V2V 최단 경로 탐색 및 연결 전략"
   - 한국통신학회(KICS) 추계학술대회, 프로시딩 게재 및 포스터 발표
   - Authors: Hyeongjin Kim, Minsoo Kim, Hyunbum Kim
+
 
 ## 수상
 - 2025.12: 자작 전기차 경진대회 – 대상 (미래자동차 융합혁신센터장)
@@ -53,6 +59,7 @@
   - 역할: 팀장
 - 2021.11: INU 자율주행 소프트웨어 경진대회 – 동상(정보기술대학장상)
   - 역할: 팀원
+
 
 ## 활동/경험
 - 2024.03 – 현재: ICONS Lab 학부 연구원 (Advisor: Prof. Hyunbum Kim)
