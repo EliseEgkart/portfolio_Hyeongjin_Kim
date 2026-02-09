@@ -68,3 +68,4 @@
   - OLED UI, 배선 구조, 모터 구동 로직 구현 및 특허 4건 출원 기여
 - 2025.04 – 2025.07: 현대 H-Mobility Class 자율주행 Track Ambassador
   - 교육 내용 요약 콘텐츠 및 홍보 자료 제작
+
