@@ -40,6 +40,7 @@
 
 \usepackage{fontawesome5}
 \usepackage[hidelinks]{hyperref}
+\usepackage{lastpage}
 
 % ==============================================================================
 % 1) Global Style and Page Layout
@@ -68,7 +69,9 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\setlength{\footskip}{5pt}
+\setlength{\footskip}{14pt}
+\newcommand{\PageNumFont}{\small} % 여기만 바꿔: \small, \scriptsize, \tiny, \normalsize ...
+\fancyfoot[C]{\raisebox{0pt}[\height][\depth]{\PageNumFont - \arabic{page}\ -}}
 
 % Global paragraph and table spacing
 \setlength{\multicolsep}{0pt}
@@ -218,6 +221,7 @@
     \small{Incheon, Republic of Korea}
   \end{center}
 \end{minipage}
+\vspace*{2mm} % <- 여기
 
 % ==============================================================================
 % Profile
@@ -245,42 +249,50 @@ Experienced in implementing real-world systems that operate reliably under pract
     \item GPA: 4.26 / 4.5 \hfill (131 / 140 credits completed)
   \resumeItemListEnd
 
-  % Manual spacing between entries (kept as-is)
-  \vspace{0.5em}
-
-  % --- Program
-  \resumeSubheading
-  {Hyundai H-Mobility Class}{Republic of Korea}
-  {Autonomous Driving Track (Advanced Communication \& Networking)}{Apr. 2025 -- Jul. 2025}
-  \resumeItemListStart
-    \item Completed coursework in perception, decision-making, control, and communication.
-    \item ROS 2–based autonomous driving training / CAN, LIN, Ethernet, and V2X communication
-  \resumeItemListEnd
-
 \resumeSubHeadingListEnd
 
 % ==============================================================================
 % Publications and Presentations
-% - enumerate list with custom item spacing (kept as-is)
 % ==============================================================================
 \section{\textbf{Publications and Presentations}}
 \small{
   \begin{enumerate}[itemsep=0.8em]
+  
+    \item \textbf{\underline{H. Kim}}, J. Ben-Othman, B. Lee, and H. Kim,
+    \textbf{``Split Federated Learning-Enabled Deep Q-Networks for Generalized Path Planning in Distributed IoT Edge Computing,''}
+    \textit{IEEE Internet of Things Journal}, Mar. 2026.
 
-    \item H. Kim, H. Kim, and M. Guizani,
-    \textbf{``A Resting Drone-enabled Surveillance Framework for Real-time \\ Monitoring with Resource Efficiency in IoT-based Smart Cities,''}
+    \item \textbf{\underline{H. Kim}}, H. Kim, and M. Guizani,
+    \textbf{``A Resting Drone-enabled Surveillance Framework for Real-time \\
+    Monitoring with Resource Efficiency in IoT-based Smart Cities,''}
     \textit{IEEE Internet of Things Journal}, Aug. 2025.
 
-    \item H. Kim and H. Kim,
-    \textbf{``Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies \\for Outdoor Autonomous Driving Platforms in ITS Environments,''}
+    \item \textbf{\underline{H. Kim}} and H. Kim,
+    \textbf{``Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies \\
+    for Outdoor Autonomous Driving Platforms in ITS Environments,''}
     Proc. of KICS Fall Conf., Oct. 2025. (Oral)
 
-    \item H. Kim, M. Kim, and H. Kim,
+    \item \textbf{\underline{H. Kim}}, M. Kim, and H. Kim,
     \textbf{``Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication,''}
     Proc. of KICS Fall Conf., Oct. 2024. (Poster)
 
   \end{enumerate}
 }
+% ==============================================================================
+% Manuscripts Under Review
+% ==============================================================================
+\section{\textbf{Manuscripts Under Review}}
+\small{
+  \begin{enumerate}[itemsep=0.8em]
+
+    \item \textbf{\underline{H. Kim}}, H. Kim, W. Kim, A. V. Vasilakos, and P. Bellavista,
+    \textbf{``Resting Drone-Enabled Enhanced ITS Coverage and V2X Integration Network Management for Urban Mobility Service,''}
+    \textit{IEEE TNSM}, under major revision.
+
+  \end{enumerate}
+}
+
+
 
 % ==============================================================================
 % Research and Professional Experience
@@ -295,6 +307,18 @@ Experienced in implementing real-world systems that operate reliably under pract
   \resumeItemListStart
     \item Investigated network optimization and resource efficiency in UAV-assisted ITS systems
     \item Investigated IoT platform--based decision-making architectures in distributed system environments
+  \resumeItemListEnd
+
+  % Manual spacing between entries (kept as-is)
+  \vspace{0.5em}
+
+  % --- Program
+  \resumeSubheading
+  {Hyundai H-Mobility Class}{Republic of Korea}
+  {Autonomous Driving Track (Advanced Communication \& Networking)}{Apr. 2025 -- Jul. 2025}
+  \resumeItemListStart
+    \item Completed coursework in perception, decision-making, control, and communication.
+    \item ROS 2–based autonomous driving training / CAN, LIN, Ethernet, and V2X communication
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -338,29 +362,6 @@ Experienced in implementing real-world systems that operate reliably under pract
     \item Led an autonomous mobility competition team and developed a sensor fusion--based \\autonomous driving system using 3D LiDAR, cameras, GNSS-RTK and IMU
   \resumeItemListEnd
 
-  \vspace{0.5em}
-
-  \resumeProject
-  {Member, Startup Club ``Greedon Green''}
-  {Incheon National University}
-  {Jul. 2023 -- Dec. 2023}
-  {}
-  \resumeItemListStart
-    \item Developed ESP32-based firmware for an automated tanghulu manufacturing machine,\\ implementing OLED UI, hardware interface design
-    , and motor control logic.
-  \resumeItemListEnd
-
-  \vspace{0.5em}
-
-  \resumeProject
-  {Class Representative, Embedded Systems Engineering (1st--6th Semesters)}
-  {Incheon National University}
-  {Mar. 2021 -- Dec. 2026}
-  {}
-  \resumeItemListStart
-    \item Disseminated department announcements and shared opportunities for competitions, conferences, and programs.
-  \resumeItemListEnd
-
 \resumeSubHeadingListEnd
 
 % ==============================================================================
@@ -378,7 +379,7 @@ Experienced in implementing real-world systems that operate reliably under pract
   \vspace{0.3em}
 
   \resumeProject
-  {Grand Prize, Homemade Electric Vehicle Competition}
+  {Grand Prize, Self-Built Electric Vehicle Competition}
   {Future Automotive Convergence Innovation Center Director Award, Incheon National University}
   {Dec. 2025}
   {Role: Team leader}
@@ -406,7 +407,7 @@ Experienced in implementing real-world systems that operate reliably under pract
   \vspace{0.3em}
 
   \resumeProject
-  {Grand Prize, Software Contest}
+  {Grand Prize, Software Contest of the College of Information Technology}
   {College of Information Technology Dean’s Award, Incheon National University}
   {Dec. 2023}
   {Role: Team leader}
@@ -441,7 +442,7 @@ Experienced in implementing real-world systems that operate reliably under pract
 % ==============================================================================
 \section{\textbf{Core Tools I Use Daily}}
 \begin{center}
-  \small Core technologies frequently used in my research and development work.
+  \small Core technologies frequently used in research and development.
 \end{center}
 
 % Manual vertical compaction (kept as-is)
@@ -449,234 +450,280 @@ Experienced in implementing real-world systems that operate reliably under pract
 
 \begin{center}
   \small{
-    ROS 2 \,|\, C/C++ \,|\, Python \,|\, Arduino (Framework) \,|\, Linux (Ubuntu) \,|\, Git/GitHub \,|\, Markdown  \,|\, LaTeX
+    ROS 2 \,|\, C/C++ \,|\, Python \,|\, Arduino (Platform) \,|\, Linux (Ubuntu) \,|\, Git/GitHub \,|\, Markdown  \,|\, LaTeX
   }
 \end{center}
 
 % ==============================================================================
 % Projects
-% - Project entries + role/stack/features list
 % ==============================================================================
-\section{\textbf{Projects}}
+\section{\textbf{Projects (Undergraduate)}}
 \resumeSubHeadingListStart
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+% ------------------------------------------------------------------------------
+% RoboCup@Work Mobile Manipulator
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://www.youtube.com/watch?v=FVn5UPFTrjI}{RoboCup@Work Mobile Manipulator: Autonomous Pick-and-Place Robot}}
+{}
+{Jul. 2025 -- Present}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Team Leader, Autonomous Driving Team
+  \item \textbf{Tech Stack}: ROS 2, Jetson Orin AGX, Rainbow Robotics RB-3, RH-P12-RN Gripper, Intel RealSense D435
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em]
+    \item Autonomous navigation of a mobile manipulator to task-relevant workstations
+    \item Vision-assisted pick-and-place manipulation using a 6-DoF robotic arm and parallel gripper
+    \item Integrated perception, navigation, and manipulation pipelines for real-world task execution
+  \end{itemize}
+\resumeItemListEnd
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+\vspace{0.5em}
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+% ------------------------------------------------------------------------------
+% Capstone Design : Last-Mile Delivery Robot
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://github.com/Moonshot-Capstone-Design/capstone_ws}{Capstone Design : Last-Mile Delivery Robot}}
+{}
+{Nov. 2025 -- Present}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Team Leader
+  \item \textbf{Tech Stack}: ROS 2, 2D LiDAR (slamtec), Camera, IMU, Jetson Orin Nano, SLAM, Nav2
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em]
+    \item Enabled autonomous navigation to designated goal locations using localization results
+    \item Estimated odometry using in-wheel motors with encoders and performed Cartographer-based SLAM
+    \item Implemented vision-based elevator button recognition and IMU-based floor transition detection
+  \end{itemize}
+\resumeItemListEnd
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+\vspace{0.5em}
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+% ------------------------------------------------------------------------------
+% FPV-Based RC Car Racing
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://github.com/EliseEgkart/iPBL_FPV_car_project}{FPV-Based RC Car Racing}}
+{}
+{Nov. 2025 -- Dec. 2025}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Team Leader
+  \item \textbf{Tech Stack}: ESP32-C3, Arduino, BLE, ESP-NOW, FPV System (Camera \& Goggles), Fusion 360
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em]
+    \item Developed FPV-based RC car firmware supporting BLE and ESP-NOW communication
+    \item Implemented real-time steering and speed control using joystick-based commands
+    \item Designed and fabricated RC car chassis and bumper using Fusion 360 for racing durability
+  \end{itemize}
+\resumeItemListEnd
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+\vspace{0.5em}
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+% ------------------------------------------------------------------------------
+% Real-World Autonomous Driving Vehicle (ERP-42)
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://github.com/UNITA2025}{Real-World Autonomous Driving Vehicle (ERP-42 Platform)}}
+{}
+{Apr. 2025 -- Nov. 2025}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Team Leader
+  \item \textbf{Tech Stack}: ROS 2, 3D LiDAR (VLP-16), Camera, RTK-GNSS, IMU, Vehicle Control
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em]
+    \item Performed navigation driving using sensor fusion of RTK-GNSS and IMU
+    \item Developed Pure Pursuit and PID-based vehicle control and onboard communication protocols
+    \item Implemented object detection and obstacle avoidance logic using camera and Velodyne VLP-16 sensor fusion
+  \end{itemize}
+\resumeItemListEnd
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+\vspace{0.5em}
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+% ------------------------------------------------------------------------------
+% Line-Following Autonomous RC Car
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://github.com/EliseEgkart/ECS_Autonomous_driving_based_on_computer_vision}{Line-Following (CV) Autonomous RC Car}}
+{}
+{May 2025 -- Jun. 2025}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Course Project
+  \item \textbf{Tech Stack}: Raspberry Pi, Arduino, OpenCV, Python, UART/Serial, PID Control
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em]
+    \item Built a line-following autonomous RC car using camera-based computer vision for lane detection
+    \item Integrated Raspberry Pi image processing with PID steering control and Arduino motor/servo actuation
+    \item Implemented dual-mode control enabling manual RC and autonomous driving via UART communication
+  \end{itemize}
+\resumeItemListEnd
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+\vspace{0.5em}
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+% ------------------------------------------------------------------------------
+% Virtual Gesture Interface Board
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://github.com/EliseEgkart/ECS_Interactive_Reactions}{Virtual Gesture Interface Board}}
+{}
+{Apr. 2025 -- May 2025}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Course Project
+  \item \textbf{Tech Stack}: JavaScript, p5.js, ml5.js (HandPose), Webcam, OBS
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em]
+    \item Implemented hand gesture recognition using ml5.js HandPose
+    \item Developed gesture-based mode switching and interactive on-screen reactions
+    \item Integrated drawing palette interactions and streamed output via OBS Virtual Camera
+  \end{itemize}
+\resumeItemListEnd
 
-  \resumeProject
-  {Last-Mile Delivery Robot (Capstone Design)}
-  {}
-  {Sep. 2025 -- Present}
-  {}
-  \vspace{-1.5em}
-  \resumeItemListStart
-    \item \textbf{Role}: Team leader
-    \item \textbf{Tech Stack}: ROS 2, LiDAR, Camera, Embedded MCU
-    \item \textbf{Key Features}:
-    \begin{itemize}[leftmargin=1.2em]
-      \item Autonomous navigation and path planning
-      \item Obstacle avoidance and safety logic
-      \item End-to-end system integration for real-world delivery
-    \end{itemize}
-  \resumeItemListEnd
-  \vspace{0.5em}
+\vspace{0.5em}
+
+% ------------------------------------------------------------------------------
+% Resting Drone
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://www.youtube.com/watch?v=_1o2Oad9vVQ}{Resting Drone}}
+{}
+{Mar. 2024 -- Nov. 2024}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Team Leader
+  \item \textbf{Tech Stack}: Pixhawk 4, PX4 Autopilot, Optical Flow, LiDAR, Servo Motor Control, ECU \& PM Board
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em]
+    \item Developed an energy-efficient resting drone that attaches to structures to eliminate hovering
+    \item Implemented servo-based attachment maneuvers with optical flow--based attitude stabilization
+    \item Built a PX4-based autonomous flight control system using Pixhawk 4
+  \end{itemize}
+\resumeItemListEnd
+
+\vspace{0.5em}
+
+% ------------------------------------------------------------------------------
+% Automated Tanghulu Manufacturing Machine
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://youtu.be/RuwLuphqz50}{Automated Tanghulu Manufacturing Machine}}
+{}
+{Jan. 2024 -- Apr. 2024}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Entrepreneurship Club
+  \item \textbf{Tech Stack}: ESP32, OLED Display, DC Motor, Fusion 360
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em]
+    \item Developed an OLED-based user interface for motor speed and operation time control
+    \item Implemented joystick-based interface control and DC motor speed adjustment
+    \item Contributed to filing four related patents (KR 10-2024-0040087 to 10-2024-0040090)
+  \end{itemize}
+\resumeItemListEnd
+
+\vspace{0.5em}
+
+% ------------------------------------------------------------------------------
+% FPS Gun Console System
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://moonshotfps1.notion.site/FPS-CONSOLE-PROJECT-1-efc70c403e4e4eee8b17e8ac6a4f5c15?pvs=74}{FPS Gun Console System}}
+{}
+{Sep. 2023 -- Dec. 2023}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Team Leader
+  \item \textbf{Tech Stack}: ESP32, Bluetooth Classic (SPP), Unity, OpenCV, IMU
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em]
+    \item Implemented a semi-virtualized IMU-based aiming system aligning muzzle orientation with on-screen view
+    \item Enabled real-time input transmission via Bluetooth using ESP32 for PC FPS game integration
+    \item Designed a Unity-based input emulation framework compatible with commercial FPS titles
+  \end{itemize}
+\resumeItemListEnd
+
+\vspace{0.5em}
+
+% ------------------------------------------------------------------------------
+% Unity-Based Game Development Project
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://www.youtube.com/shorts/RJIRCw1mdC4}{Unity-Based Game Development Project}}
+{}
+{Jul. 2023 -- Sep. 2023}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Personal Projects
+  \item \textbf{Tech Stack}: Unity
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em]
+    \item Game Project 1: Bird Flight Simulation Game 
+    \item Game Project 2: 2D Side-Scrolling Action Platformer 
+    \item Game Project 3: Top-Down Arena Roguelike Action Game
+  \end{itemize}
+\resumeItemListEnd
+
+\vspace{0.5em}
+
+% ------------------------------------------------------------------------------
+% Wireless Mobile Fan Control System : Fan-Li
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://www.youtube.com/watch?v=8pNXA40yGwk}{Wireless Mobile Fan Control System : Fan-Li}}
+{}
+{Sep. 2021 -- Dec. 2021}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Team Leader
+  \item \textbf{Tech Stack}: Arduino, ESP32-CAM, Bluetooth Control App, Real-time Streaming, Fusion 360
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em, topsep=0pt, itemsep=0pt, parsep=0pt]
+    \item Enabled wireless control of the fan via a Bluetooth-based mobile app
+    \item Implemented real-time video streaming using ESP32-CAM
+    \item Integrated mobility and airflow control into a mobile fan system
+  \end{itemize}
+\resumeItemListEnd
+
+\vspace{0.5em}
+
+% ------------------------------------------------------------------------------
+% Intelligent Book Arrangement Robot (IBA)
+% ------------------------------------------------------------------------------
+\resumeProject
+{\href{https://youtube.com/shorts/7Net92QTvlI?feature=share}{Intelligent Book Arrangement Robot (IBA)}}
+{}
+{May 2021 -- Sep. 2021}
+{}
+\vspace{-1.5em}
+\resumeItemListStart
+  \item \textbf{Role}: Team Member
+  \item \textbf{Tech Stack}: Arduino, RFID, DC Motor, Servo Motor, Stepper Motor
+  \item \textbf{Key Features}:
+  \begin{itemize}[leftmargin=1.2em, topsep=0pt, itemsep=0pt, parsep=0pt]
+    \item Implemented RFID-based localization using floor-mounted tags
+    \item Built a multi-motor control system for navigation and book handling
+    \item Supported vision-based book classification for automated sorting
+  \end{itemize}
+\resumeItemListEnd
 
 \resumeSubHeadingListEnd
+
 
 % ==============================================================================
 % End of document
