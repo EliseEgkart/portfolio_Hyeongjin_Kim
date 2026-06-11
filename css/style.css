@@ -10401,7 +10401,7 @@ a:hover {
 .hmg-card::after {
   background-image: url("../images/hmg_logo.png");
   right: -20px;
-  top: 5px;
+  top: 15px;
   width: 170px;
   height: 70px;
 }
@@ -10452,6 +10452,125 @@ a:hover {
 .awards-grid .award-item p {
   font-size: 0.85rem;
   margin-top: 6px;
+}
+
+.featured-publications {
+  display: grid;
+  gap: 22px;
+}
+
+.publication-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 22px;
+  align-items: stretch;
+  padding: 22px;
+  border: 1px solid var(--brand-border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--brand-shadow);
+}
+
+.publication-figure {
+  order: 2;
+  align-self: center;
+  min-height: 0;
+  margin-top: 12px;
+  background: transparent;
+}
+
+.publication-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 230px;
+  object-fit: contain;
+  border: 2px solid rgba(28, 34, 43, 0.72);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.figure-placeholder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 210px;
+  border: 1px dashed rgba(28, 34, 43, 0.16);
+  background:
+    linear-gradient(135deg, rgba(255, 122, 24, 0.12), rgba(43, 179, 163, 0.12)),
+    #f8f3ea;
+  color: var(--brand-muted);
+  text-align: center;
+}
+
+.figure-placeholder::before {
+  content: attr(data-figure);
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--brand-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.figure-placeholder span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.publication-content {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 66px;
+}
+
+.publication-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--brand-accent-2);
+  box-shadow: 0 12px 24px rgba(43, 179, 163, 0.28);
+}
+
+.publication-icon span {
+  color: #fff;
+  font-size: 25px;
+}
+
+.publication-content .date {
+  color: var(--brand-accent);
+  font-weight: 800;
+}
+
+.publication-content h4 {
+  margin: 8px 0 10px;
+  line-height: 1.45;
+}
+
+.publication-content .position {
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.45;
+}
+
+.publication-content p {
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.publication-doi {
+  margin-top: auto;
 }
 
 .projects-grid {
@@ -10754,6 +10873,15 @@ a:focus-visible,
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .publication-card {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-figure,
+  .publication-content {
+    order: initial;
   }
 
   .section-heading-row {
