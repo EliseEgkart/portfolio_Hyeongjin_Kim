@@ -1,4 +1,4 @@
-﻿/*!
+﻿﻿/*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -10308,6 +10308,28 @@ a:hover {
   text-transform: uppercase;
 }
 
+.section-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.proof-btn {
+  border: 1px solid var(--brand-accent);
+  color: var(--brand-accent);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 12px 24px rgba(17, 19, 22, 0.08);
+}
+
+.proof-btn:hover,
+.proof-btn:focus {
+  color: #fff;
+  background: var(--brand-accent);
+  border-color: var(--brand-accent);
+}
+
 .resume-wrap {
   border-bottom: none;
   border: 1px solid var(--brand-border);
@@ -10332,6 +10354,114 @@ a:hover {
 
 .resume-wrap .date {
   color: var(--brand-accent);
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.awards-grid .resume-wrap {
+  margin-bottom: 0;
+}
+
+.awards-grid .award-item {
+  min-height: 150px;
+  padding: 18px;
+  border-radius: 16px;
+  gap: 14px;
+}
+
+.awards-grid .award-item .icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+}
+
+.awards-grid .award-item .icon span {
+  font-size: 21px;
+}
+
+.awards-grid .award-item .text {
+  padding-left: 0 !important;
+}
+
+.awards-grid .award-item h2 {
+  font-size: 1rem;
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
+.awards-grid .award-item .position {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.awards-grid .award-item p {
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.modal-backdrop.show {
+  background-color: #6b7280;
+  opacity: 0.72;
+}
+
+.award-proof-modal .modal-content {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(17, 19, 22, 0.28);
+}
+
+.award-proof-modal .modal-header {
+  align-items: center;
+  border-bottom: 1px solid var(--brand-border);
+  padding: 18px 22px;
+}
+
+.award-proof-modal .modal-title {
+  font-weight: 700;
+  color: var(--brand-ink);
+}
+
+.award-proof-modal .modal-body {
+  padding: 26px;
+  max-height: 72vh;
+  overflow-y: auto;
+}
+
+.award-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.award-proof-grid figure {
+  margin-bottom: 0;
+  padding: 12px;
+  border: 1px solid var(--brand-border);
+  border-radius: 14px;
+  background: rgba(246, 241, 234, 0.48);
+}
+
+.award-proof-grid img {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.award-proof-grid figcaption {
+  margin-top: 10px;
+  color: var(--brand-ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.45;
 }
 
 .item-header {
@@ -10362,6 +10492,10 @@ a:hover {
 
 .pub-subheading .pub-title {
   font-weight: 500;
+}
+
+.pub-subheading .proof-btn {
+  white-space: nowrap;
 }
 
 .link-card {
@@ -10496,6 +10630,19 @@ a:focus-visible,
   .resume-wrap {
     padding: 18px;
     gap: 12px;
+  }
+
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .award-proof-grid {
+    grid-template-columns: 1fr;
   }
 
   .item-header {
