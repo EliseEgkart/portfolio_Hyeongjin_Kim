@@ -9992,6 +9992,14 @@ a:hover {
   font-size: clamp(2.6rem, 6vw, 4.8rem);
 }
 
+.hero-role {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #4a5461;
+  margin: 0.35rem auto 0;
+  letter-spacing: 0.04em;
+}
+
 .slider-text h2 {
   font-weight: 600;
 }
@@ -10119,6 +10127,10 @@ a:hover {
   font-size: 0.9rem;
 }
 
+.about-profile-image {
+  background-image: url("../images/about.jpg");
+}
+
 .btn {
   border-radius: 999px;
   font-weight: 600;
@@ -10217,6 +10229,41 @@ a:hover {
   color: var(--brand-accent);
 }
 
+.resume-wrap.featured-card {
+  border-color: rgba(255, 122, 24, 0.4);
+  box-shadow: 0 24px 60px rgba(17, 19, 22, 0.13);
+  position: relative;
+}
+
+.resume-wrap.featured-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 5px;
+  border-radius: 0 6px 6px 0;
+  background: var(--brand-accent);
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.item-header h4 {
+  flex: 1 1 260px;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.item-header .btn {
+  flex: 0 0 auto;
+}
+
 .pub-subheading {
   border-bottom: 2px solid var(--brand-accent);
 }
@@ -10245,6 +10292,10 @@ a:hover {
 .link-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 30px 70px rgba(17, 19, 22, 0.16);
+}
+
+.link-card-icon {
+  font-size: 48px;
 }
 
 .contact-section .box {
@@ -10278,6 +10329,10 @@ a:hover {
   overflow: hidden;
 }
 
+.hireme-bg {
+  background-image: url("../images/bg_1.jpg");
+}
+
 .ftco-hireme .overlay {
   background: rgba(28, 34, 43, 0.45);
 }
@@ -10305,6 +10360,13 @@ a:hover {
   animation: none;
 }
 
+a:focus-visible,
+.btn:focus-visible,
+.mouse-icon:focus-visible {
+  outline: 3px solid rgba(43, 179, 163, 0.55);
+  outline-offset: 4px;
+}
+
 @media (max-width: 767.98px) {
   .hero-actions {
     flex-direction: column;
@@ -10322,6 +10384,20 @@ a:hover {
   .hero-accent-right {
     width: 140px;
     height: 110px;
+  }
+
+  .resume-wrap {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .item-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .item-header h4 {
+    flex-basis: auto;
   }
 }
 
