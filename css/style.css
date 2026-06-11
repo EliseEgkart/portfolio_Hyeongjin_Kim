@@ -1,4 +1,4 @@
-﻿﻿/*!
+﻿/*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -10356,6 +10356,56 @@ a:hover {
   color: var(--brand-accent);
 }
 
+.education-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::after {
+  content: "";
+  position: absolute;
+  right: 34px;
+  top: 28px;
+  bottom: auto;
+  width: 138px;
+  height: 138px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.51;
+  pointer-events: none;
+}
+
+.education-card .text,
+.education-card .icon {
+  position: relative;
+  z-index: 1;
+}
+
+.hyu-card::after {
+  background-image: url("../images/hyu_logo.png");
+  width: 240px;
+  height: 240px;
+  right: -60px;
+  top: -75px;
+}
+
+.inu-card::after {
+  background-image: url("../images/inu_logo.png");
+  width: 146px;
+  height: 146px;
+  right: -10px;
+  top: -20px;
+}
+
+.hmg-card::after {
+  background-image: url("../images/hmg_logo.png");
+  right: -20px;
+  top: 5px;
+  width: 170px;
+  height: 70px;
+}
+
 .awards-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -10402,6 +10452,72 @@ a:hover {
 .awards-grid .award-item p {
   font-size: 0.85rem;
   margin-top: 6px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.projects-grid .resume-wrap {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.projects-grid .resume-wrap .icon {
+  display: none !important;
+}
+
+.project-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--brand-surface-2);
+  overflow: hidden;
+}
+
+.project-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.projects-grid .resume-wrap:hover .project-thumb img {
+  transform: scale(1.04);
+}
+
+.projects-grid .resume-wrap .text {
+  width: 100%;
+  padding: 20px !important;
+}
+
+.projects-grid .resume-wrap .date {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.projects-grid .resume-wrap h4 {
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.projects-grid .resume-wrap .position {
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  margin: 8px 0;
+}
+
+.projects-grid .resume-wrap p,
+.projects-grid .resume-wrap li {
+  font-size: 0.9rem;
+  line-height: 1.65;
 }
 
 .modal-backdrop.show {
@@ -10633,6 +10749,10 @@ a:focus-visible,
   }
 
   .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 
