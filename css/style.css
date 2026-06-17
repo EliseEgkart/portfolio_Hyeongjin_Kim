@@ -10573,6 +10573,31 @@ a:hover {
   margin-top: auto;
 }
 
+#education-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#page-1 {
+  order: 1;
+}
+
+#page-2 {
+  order: 2;
+}
+
+#page-5 {
+  order: 3;
+}
+
+#page-3 {
+  order: 4;
+}
+
+#page-4 {
+  order: 5;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
