@@ -10600,8 +10600,14 @@ a:hover {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+#projects-section .col-lg-10 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .projects-grid .resume-wrap {
@@ -10611,6 +10617,7 @@ a:hover {
   margin-bottom: 0;
   padding: 0;
   overflow: hidden;
+  position: relative;
 }
 
 .projects-grid .resume-wrap .icon {
@@ -10622,6 +10629,16 @@ a:hover {
   aspect-ratio: 16 / 9;
   background: var(--brand-surface-2);
   overflow: hidden;
+  position: relative;
+}
+
+.project-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(248, 122, 35, 0.86);
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
 .project-thumb img {
@@ -10636,32 +10653,90 @@ a:hover {
   transform: scale(1.04);
 }
 
+.projects-grid .resume-wrap:has(.project-thumb:hover) .project-thumb::after {
+  opacity: 1;
+}
+
 .projects-grid .resume-wrap .text {
   width: 100%;
-  padding: 20px !important;
+  padding: 16px !important;
 }
 
 .projects-grid .resume-wrap .date {
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .projects-grid .resume-wrap h4 {
-  font-size: 1.05rem;
-  line-height: 1.45;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  min-height: 2.8em;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .projects-grid .resume-wrap .position {
   display: block;
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   line-height: 1.45;
-  margin: 8px 0;
+  margin: 6px 0;
 }
 
 .projects-grid .resume-wrap p,
 .projects-grid .resume-wrap li {
-  font-size: 0.9rem;
-  line-height: 1.65;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.projects-grid .resume-wrap .text > p.mb-1 {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 18px;
+  z-index: 2;
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 800;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateY(8px);
+}
+
+.projects-grid .resume-wrap ul {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 46px;
+  z-index: 2;
+  display: -webkit-box;
+  max-height: calc((100vw - 40px) * 0.5625);
+  margin: 0;
+  padding-left: 17px;
+  color: #fff;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateY(8px);
+}
+
+.projects-grid .resume-wrap:has(.project-thumb:hover) .text > p.mb-1,
+.projects-grid .resume-wrap:has(.project-thumb:hover) ul {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-grid .resume-wrap .text > p.mb-2 {
+  display: -webkit-box;
+  margin-bottom: 0 !important;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .modal-backdrop.show {
@@ -10838,9 +10913,9 @@ a:hover {
 }
 
 .subpage-hero {
-  padding-top: 11rem;
-  padding-bottom: 4rem;
-  background: linear-gradient(135deg, rgba(255, 250, 244, 0.98), rgba(238, 247, 246, 0.94));
+  padding-top: 7rem;
+  padding-bottom: 1.4rem;
+  background: transparent;
 }
 
 .subpage-hero .subheading {
@@ -10851,20 +10926,20 @@ a:hover {
 }
 
 .subpage-hero h1 {
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  font-size: clamp(2.1rem, 5vw, 3.6rem);
   font-weight: 800;
-  margin: 0.6rem 0 1rem;
+  margin: 0.35rem 0 0.7rem;
 }
 
 .subpage-hero p {
   max-width: 720px;
   margin: 0 auto;
   color: var(--brand-muted);
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .detail-section {
-  padding-top: 4rem;
+  padding-top: 2.5rem;
 }
 
 .detail-section .page {
@@ -10872,7 +10947,7 @@ a:hover {
 }
 
 .resume-hero {
-  padding-bottom: 3.2rem;
+  padding-bottom: 1.4rem;
 }
 
 .resume-actions {
@@ -10880,7 +10955,7 @@ a:hover {
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 1.25rem;
 }
 
 .resume-actions .btn span {
@@ -10888,7 +10963,7 @@ a:hover {
 }
 
 .resume-viewer-section {
-  padding-top: 3rem;
+  padding-top: 2.5rem;
   background: #11131a;
 }
 
@@ -11013,6 +11088,12 @@ a:focus-visible,
   outline-offset: 4px;
 }
 
+@media (max-width: 1199.98px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 767.98px) {
   .hero-wrap {
     min-height: 100vh;
@@ -11069,8 +11150,8 @@ a:focus-visible,
   }
 
   .subpage-hero {
-    padding-top: 8rem;
-    padding-bottom: 3rem;
+    padding-top: 6.5rem;
+    padding-bottom: 1.4rem;
   }
 
   .resume-viewer-shell {
