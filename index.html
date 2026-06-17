@@ -53,31 +53,44 @@
 	<section class="hero-wrap js-fullheight" id="home-section">
 		<div class="overlay"></div>
 		<div class="container">
-			<div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
-				<div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
-					<div class="text text-center">
+			<div class="row no-gutters slider-text js-fullheight align-items-center hero-layout">
+				<div class="col-lg-6 col-md-7 ftco-animate d-flex align-items-center">
+					<div class="text hero-copy">
 						<span class="subheading">Robotics · Autonomous Systems · Embedded</span>
 						<h1>Hyeongjin Kim</h1>
-						<p class="hero-role">Thank you for visiting my portfolio.</p>
+						<p class="hero-role">Robotics engineer building real-world autonomous systems.</p>
 						<h2 class="hero-rotate">Focus
 							<span class="txt-rotate" data-period="1400"
 								data-rotate='["ROS2 기반 자율주행", "센서 융합과 통신 아키텍처", "RL-Based 로보틱스", "ROS2 기반 로보틱스"]'></span>
 						</h2>
 						<p class="hero-tagline">실환경에서 동작하는 로보틱스·자율주행·임베디드 시스템을 설계하고 구현합니다.</p>
+						<div class="hero-metrics" aria-label="Portfolio highlights">
+							<div><strong>12+</strong><span>Projects</span></div>
+							<div><strong>3</strong><span>IEEE Papers</span></div>
+							<div><strong>10</strong><span>Awards</span></div>
+						</div>
 						<div class="hero-actions">
 							<a class="btn btn-primary" href="projects/">프로젝트 보기</a>
-							<a class="btn btn-outline" href="index.html#contact-section">협업/채용 문의</a>
+							<a class="btn btn-outline" href="resume/">Resume</a>
 						</div>
 					</div>
 				</div>
+				<div class="col-lg-6 col-md-5 ftco-animate">
+					<a class="hero-project-card" href="projects/" aria-label="View robotics projects">
+						<div class="hero-project-image">
+							<img src="images/projects/robocup-sml-mobile-manipulator.png" alt="RoboCup@SML autonomous mobile manipulator robot">
+						</div>
+						<div class="hero-project-caption">
+							<span>Featured Project</span>
+							<strong>RoboCup@SML Mobile Manipulator</strong>
+							<p>ROS 2 기반 자율주행과 모바일 매니퓰레이션을 통합한 실환경 로봇 프로젝트</p>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
-		<div class="hero-accents" aria-hidden="true">
-			<div class="hero-accent hero-accent-left"></div>
-			<div class="hero-accent hero-accent-right"></div>
-		</div>
 		<div class="mouse">
-			<a href="index.html#about-section" class="mouse-icon" aria-label="About section으로 이동">
+			<a href="#about-section" class="mouse-icon" aria-label="About section으로 이동">
 				<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
 			</a>
 		</div>
@@ -86,17 +99,17 @@
 	<!-- About -->
 	<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
 		<div class="container">
-			<div class="row d-flex no-gutters">
-				<div class="col-md-6 col-lg-6 d-flex">
+			<div class="row d-flex no-gutters about-layout">
+				<div class="col-md-6 col-lg-6 d-flex about-media-col">
 					<div class="img-about img d-flex align-items-stretch">
 						<div class="overlay"></div>
 						<div class="img d-flex align-self-stretch align-items-center about-profile-image" role="img" aria-label="김형진 프로필 이미지">
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 col-lg-6 pl-md-5 py-5">
+				<div class="col-md-6 col-lg-6 pl-md-5 py-5 about-copy-col">
 					<div class="row justify-content-start pb-3">
-						<div class="col-md-12 heading-section ftco-animate">
+						<div class="col-md-12 heading-section ftco-animate about-copy-panel">
 							<h1 class="big">About</h1>
 							<h2 class="mb-4">About Me</h2>
 							<p>로봇·자율주행·임베디드 시스템을 중심으로 하드웨어부터 소프트웨어까지 전 과정을 다루는 엔지니어입니다.</p>
@@ -135,7 +148,7 @@
 				<div class="col-md-8 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Portfolio</h1>
 					<h2 class="mb-4">Explore by Category</h2>
-					<p>The homepage now stays concise, with detailed sections separated into focused pages.</p>
+					<p>프로젝트, 연구, 수상, 이력서를 목적별로 빠르게 확인할 수 있습니다.</p>
 				</div>
 			</div>
 			<div class="row portfolio-nav-grid">

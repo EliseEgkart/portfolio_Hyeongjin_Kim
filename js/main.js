@@ -275,15 +275,69 @@
 		$('.mouse-icon').on('click', function(event){
 			
 			event.preventDefault();
+			var target = $($(this).attr('href'));
+			if (!target.length) {
+				target = $('.goto-here');
+			}
+			if (!target.length) return false;
 
 			$('html,body').animate({
-				scrollTop: $('.goto-here').offset().top
+				scrollTop: target.offset().top - 70
 			}, 500, 'easeInOutExpo');
 			
 			return false;
 		});
 	};
 	goHere();
+
+	var heroProjectRotator = function() {
+		var card = $('.hero-project-card');
+		if (!card.length) return;
+
+		var image = card.find('.hero-project-image img');
+		var title = card.find('.hero-project-caption strong');
+		var description = card.find('.hero-project-caption p');
+		var projects = [
+			{
+				image: 'images/projects/robocup-sml-mobile-manipulator.png',
+				alt: 'RoboCup@SML autonomous mobile manipulator robot',
+				title: 'RoboCup@SML Mobile Manipulator',
+				description: 'ROS 2 autonomous navigation and mobile manipulation on a real robot platform.'
+			},
+			{
+				image: 'images/projects/last-mile-delivery-robot.png',
+				alt: 'Last-mile delivery robot project',
+				title: 'Last-mile Delivery Robot',
+				description: 'Indoor delivery robot system integrating SLAM, Nav2, LiDAR, and RealSense.'
+			},
+			{
+				image: 'images/projects/erp42-autonomous-driving.png',
+				alt: 'ERP-42 autonomous driving platform',
+				title: 'ERP-42 Autonomous Driving',
+				description: 'Road-scale autonomous driving with RTK-GNSS, IMU, camera, and 3D LiDAR.'
+			},
+			{
+				image: 'images/projects/resting-drone.png',
+				alt: 'Resting Drone project',
+				title: 'Resting Drone',
+				description: 'Energy-efficient drone concept combining a resting mechanism with PX4 flight control.'
+			}
+		];
+		var index = 0;
+
+		setInterval(function() {
+			index = (index + 1) % projects.length;
+			card.addClass('is-changing');
+			setTimeout(function() {
+				image.attr('src', projects[index].image);
+				image.attr('alt', projects[index].alt);
+				title.text(projects[index].title);
+				description.text(projects[index].description);
+				card.removeClass('is-changing');
+			}, 240);
+		}, 4200);
+	};
+	heroProjectRotator();
 
 	// $("#myScrollspy").scrollspy({ offset: -75 });
 
