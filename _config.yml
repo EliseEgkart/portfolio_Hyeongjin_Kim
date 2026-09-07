@@ -1,0 +1,84 @@
+locale: en-US
+site_theme: default
+title: Hyeongjin Kim
+name: Hyeongjin Kim
+description: Academic website of Hyeongjin Kim, focusing on UAVs, reinforcement learning, autonomous systems, robot learning, and AI-enabled networked systems.
+url: https://eliseegkart.github.io
+baseurl: /portfolio_Hyeongjin_Kim
+repository: EliseEgkart/portfolio_Hyeongjin_Kim
+author:
+  name: Hyeongjin Kim
+  korean_name: 김형진
+  avatar: /images/profile/hyeongjin-kim.webp
+  bio: Researcher
+  department: Department of Electrical Engineering
+  employer: Hanyang University
+  laboratory: Control & Optimization Laboratory
+  laboratory_short: COLAB
+  laboratory_url: https://sites.google.com/view/hy-contopt
+  program: Integrated M.S.–Ph.D. program
+  location: Seoul, Republic of Korea
+  email: ky942400@gmail.com
+  github: EliseEgkart
+  orcid: https://orcid.org/0009-0001-6271-3052
+  youtube: https://www.youtube.com/@Hyeongjin-kim
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+include: ["_pages"]
+exclude:
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - README.md
+  - MAINTENANCE.md
+  - MIGRATION_REPORT.md
+  - scripts
+  - docs
+  - Academic_CV/main.tex
+  - Academic_CV/main_origin.tex
+  - Academic_CV/author1.pdf
+  - Academic_CV/README.txt
+  - Academic_CV/latexmkrc
+  - Academic_CV/build
+  - .agents
+  - .codex
+collections:
+  publications:
+    output: true
+    permalink: /publications/:name/
+  portfolio:
+    output: true
+    permalink: /projects/:name/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: publication
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: project
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+sass:
+  sass_dir: _sass
+  style: compressed
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+timezone: Asia/Seoul
+encoding: utf-8
+strict_front_matter: true

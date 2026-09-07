@@ -19,7 +19,6 @@
 \usepackage{lipsum}
 \usepackage{marvosym}
 \usepackage{cfr-lm}
-\usepackage{fontawesome5}
 \usepackage[hidelinks]{hyperref}
 \usepackage{lastpage}
 
@@ -100,25 +99,25 @@
 
 \newcommand{\resumePOR}[3]{%
 \item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabularx}{0.97\textwidth}[t]{@{}X>{\raggedleft\arraybackslash}p{4.1cm}@{}}
         \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}}
-    \end{tabular*}
+    \end{tabularx}
 }
 
 \newcommand{\resumeSubheading}[4]{%
 \item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabularx}{0.98\textwidth}[t]{@{}X>{\raggedleft\arraybackslash}p{4.1cm}@{}}
         \textbf{#1} & \textit{\footnotesize{#4}} \\
         \textit{\footnotesize{#3}} & \footnotesize{#2}\\
-    \end{tabular*}
+    \end{tabularx}
 }
 
 \newcommand{\resumeProject}[4]{%
 \item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabularx}{0.98\textwidth}[t]{@{}X>{\raggedleft\arraybackslash}p{4.1cm}@{}}
         \textbf{#1} & \textit{\footnotesize{#3}} \\
-        \footnotesize{\textit{#2}} & \footnotesize{#4}
-    \end{tabular*}
+        \footnotesize{\textit{#2}} \if\relax\detokenize{#4}\relax\else\newline\footnotesize{#4}\fi &
+    \end{tabularx}
 }
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}}
@@ -128,24 +127,25 @@
 
 \begin{document}
 \headerfontiii
+% Give the first-page sections more breathing room; reset for project pages.
+\titlespacing*{\section}{0pt}{18pt}{10pt}
 
 \noindent
 {\Huge\textbf{Hyeongjin Kim}}\\[1.2mm]
 \small{
-Incheon, Republic of Korea \,|\, +82 10 3187 9925 \,|\, \href{mailto:ky942400@gmail.com}{ky942400@gmail.com} \\
-\socialicon{\faGithub} \href{https://github.com/EliseEgkart}{GitHub: EliseEgkart} \,|\, \socialicon{\faYoutube} \href{https://www.youtube.com/@Hyeongjin-kim}{YouTube: @Hyeongjin-kim} \,|\, \socialicon{\faGlobe} \href{https://eliseegkart.github.io/portfolio_Hyeongjin_Kim/}{Web Portfolio}
+Seoul, Republic of Korea \,|\, \href{mailto:ky942400@gmail.com}{ky942400@gmail.com} \\
+\href{https://github.com/EliseEgkart}{GitHub: EliseEgkart} \,|\, \href{https://www.youtube.com/@Hyeongjin-kim}{YouTube: Project demonstrations} \,|\, \href{https://eliseegkart.github.io/portfolio_Hyeongjin_Kim/}{Web Portfolio}
 }
 \vspace*{3mm}
 
 \section{\textbf{Profile}}
 \small{
-Undergraduate student in Embedded Systems Engineering with practical experience in robotics, autonomous driving, and embedded systems.
-Skilled in ROS 2-based robotic system development, sensor fusion, communication system design, and embedded firmware implementation.
+Researcher at the Control \& Optimization Laboratory (COLAB), Hanyang University, pursuing an integrated M.S.--Ph.D. program in Electrical Engineering under the supervision of Prof. Jun Moon. My research interests focus on reinforcement learning, networks, robot learning, and robotic manipulation, supported by practical experience in ROS 2 robotics and sensor fusion.
 }
 
 \section{\textbf{Research Interests}}
 \small{
-Reinforcement learning for intelligent robotic systems, Multi-agent distributed systems and large-scale infrastructure optimization, multi-modal 3D perception, V2X-enabled networked systems, UAV-assisted intelligent transportation systems.
+Reinforcement learning, networks and networked systems, robot learning, and robotic manipulation.
 }
 
 \section{\textbf{Education}}
@@ -153,13 +153,13 @@ Reinforcement learning for intelligent robotic systems, Multi-agent distributed 
 
   \resumeSubheading
   {Hanyang University}{Seoul, Republic of Korea}
-  {M.S. in Electrical Engineering (Incoming)}{Starting Sep. 2026}
+  {Integrated M.S.--Ph.D. program in Electrical Engineering}{Sep. 2026 -- Present}
 
   \vspace{0.5em}
 
   \resumeSubheading
   {Incheon National University}{Incheon, Republic of Korea}
-  {B.S. in Embedded Systems Engineering}{Mar. 2021.03 -- 2026.08}
+  {B.Eng. in Embedded Systems Engineering}{Mar. 2021 -- Aug. 2026}
   \resumeItemListStart
     \item Graduated first in class, Department of Embedded Systems Engineering
     \item GPA: 4.28 / 4.5 \hfill (140 / 140 credits completed)
@@ -169,10 +169,18 @@ Reinforcement learning for intelligent robotic systems, Multi-agent distributed 
 
 \section{\textbf{Research and Professional Experience}}
 \resumeSubHeadingListStart
+  \resumeSubheading
+  {\href{https://sites.google.com/view/hy-contopt}{Control \& Optimization Laboratory (COLAB)}}{Seoul, Republic of Korea}
+  {Researcher (Advisor: Prof. Jun Moon)}{Sep. 2026 -- Present}
+  \resumeItemListStart
+    \item Research interests: reinforcement learning, networks, robot learning, and robotic manipulation.
+  \resumeItemListEnd
+  \vspace{0.5em}
+
 
   \resumeSubheading
-  {ICONS Laboratory}{Incheon, Republic of Korea}
-  {Undergraduate Researcher (Advisor: Prof. Hyunbum Kim)}{Mar. 2024 -- Present}
+  {\href{https://sites.google.com/view/hyunbumkim/home?authuser=0}{ICONS Laboratory}}{Incheon, Republic of Korea}
+  {Undergraduate Researcher (Advisor: Prof. Hyunbum Kim)}{Mar. 2024 -- Jun. 2026}
   \resumeItemListStart
     \item Investigated network optimization and resource efficiency in UAV-assisted ITS systems
     \item Investigated IoT platform--based decision-making architectures in distributed system environments
@@ -181,7 +189,7 @@ Reinforcement learning for intelligent robotic systems, Multi-agent distributed 
   \vspace{0.5em}
 
   \resumeSubheading
-  {Hyundai H-Mobility Class}{Republic of Korea}
+  {\href{https://h-mobility-class.com/}{Hyundai H-Mobility Class}}{Republic of Korea}
   {Autonomous Driving Track (Advanced Communication \& Networking)}{Apr. 2025 -- Jul. 2025}
   \resumeItemListStart
     \item Completed coursework in perception, decision-making, control, and communication.
@@ -196,36 +204,37 @@ Reinforcement learning for intelligent robotic systems, Multi-agent distributed 
 
     \item \textbf{\underline{H. Kim}}, H. Kim, W. Kim, A. V. Vasilakos, and P. Bellavista,
     \textbf{``Resting Drone-Enabled Enhanced ITS Coverage and V2X Integration Network Management for Urban Mobility Service,''}
-    \textit{IEEE TNSM}, Mar. 2026.
+    \textit{IEEE Transactions on Network and Service Management}, vol. 23, pp. 3268--3278, 2026. \href{https://doi.org/10.1109/TNSM.2026.3673324}{DOI: 10.1109/TNSM.2026.3673324}.
 
     \item \textbf{\underline{H. Kim}}, J. Ben-Othman, B. Lee, and H. Kim,
-    \textbf{``Split Federated Learning-Enabled Deep Q-Networks for Generalized Path Planning in Distributed IoT Edge Computing,''}
-    \textit{IEEE Internet of Things Journal}, Mar. 2026.
+    \textbf{``Split Federated Learning-Enabled Deep Q-Networks for Generalized Path Planning in Distributed IoT Edge Platform,''}
+    \textit{IEEE Internet of Things Journal}, vol. 13, no. 11, pp. 23495--23505, Jun. 2026. \href{https://doi.org/10.1109/JIOT.2026.3670351}{DOI: 10.1109/JIOT.2026.3670351}.
 
     \item \textbf{\underline{H. Kim}}, H. Kim, and M. Guizani,
-    \textbf{``A Resting Drone-enabled Surveillance Framework for Real-time \\
-    Monitoring with Resource Efficiency in IoT-based Smart Cities,''}
-    \textit{IEEE Internet of Things Journal}, Aug. 2025.
+    \textbf{``A Resting Drone-Enabled Surveillance Framework for Real-Time Monitoring With Resource Efficiency in IoT-Based Smart City,''}
+    \textit{IEEE Internet of Things Journal}, vol. 12, no. 16, pp. 33995--34006, Aug. 2025. \href{https://doi.org/10.1109/JIOT.2025.3577655}{DOI: 10.1109/JIOT.2025.3577655}.
 
     \item \textbf{\underline{H. Kim}} and H. Kim,
     \textbf{``Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies \\
     for Outdoor Autonomous Driving Platforms in ITS Environments,''}
-    Proc. of KICS Fall Conf., Oct. 2025. (Oral)
+    \textit{KICS Fall Conference 2025}, Nov. 21, 2025. (Oral)
 
     \item \textbf{\underline{H. Kim}}, M. Kim, and H. Kim,
     \textbf{``Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication,''}
-    Proc. of KICS Fall Conf., Oct. 2024. (Poster)
+    \textit{KICS Fall Conference 2024}, Nov. 2024, pp. 1101--1102. (Poster)
 
   \end{enumerate}
 }
 
+\clearpage
+\titlespacing*{\section}{0pt}{8pt}{6pt}
 \section{\textbf{Projects (Undergraduate)}}
 \resumeSubHeadingListStart
 
 \resumeProject
 {\href{https://www.youtube.com/watch?v=FVn5UPFTrjI}{2026 RoboCup Smart Manufacturing : League Mobile Manipulator}}
 {}
-{Jul. 2025 -- Present}
+{Jul. 2025 -- Jul. 2026}
 {}
 \vspace{-1.5em}
 \resumeItemListStart
@@ -244,12 +253,12 @@ Reinforcement learning for intelligent robotic systems, Multi-agent distributed 
 \resumeProject
 {\href{https://github.com/EliseEgkart/capstone_final_ws}{Capstone Design : Last-Mile Delivery Robot}}
 {}
-{Nov. 2025 -- Present}
+{Nov. 2025 -- Jun. 2026}
 {}
 \vspace{-1.5em}
 \resumeItemListStart
   \item \textbf{Role}: Team Leader
-  \item \textbf{Tech Stack}: ROS 2, 2D LiDAR (slamtec), ntel RealSense D435, IMU, Jetson Orin Nano, SLAM, Nav2, Moveit
+  \item \textbf{Tech Stack}: ROS 2, 2D LiDAR (slamtec), Intel RealSense D435, IMU, Jetson Orin Nano, SLAM, Nav2, Moveit
   \item \textbf{Key Features}:
   \begin{itemize}[leftmargin=1.2em]
     \item Enabled autonomous navigation to designated goal locations using localization results
@@ -450,6 +459,18 @@ Reinforcement learning for intelligent robotic systems, Multi-agent distributed 
 
 \resumeSubHeadingListEnd
 
+
+\section{\textbf{Additional Robotics Project}}
+\resumeSubHeadingListStart
+\resumeProject
+{Camera--LiDAR Sensor Fusion Smart Stroller}
+{ROS 2, camera, 2D LiDAR, sensor fusion, Arduino}
+{}{}
+\resumeItemListStart
+  \item Integrated camera and 2D LiDAR sensing through a ROS 2 sensor-fusion system, with low-level motor actuation controlled by Arduino.
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
 \section{\textbf{Leadership \& Ambassador Activities}}
 \resumeSubHeadingListStart
 
@@ -505,7 +526,7 @@ ROS 2 \,|\, C/C++ \,|\, Python \,|\, Arduino (Platform) \,|\, Linux (Ubuntu) \,|
   \resumeProject
   {Outstanding Learner Award, Hyundai H-Mobility Class}
   {Hyundai Motor Group R\&D Division Head Award}
-  {Jul. 2025}
+  {Aug. 25, 2025}
   {}
   \vspace{0.3em}
 
@@ -574,14 +595,23 @@ ROS 2 \,|\, C/C++ \,|\, Python \,|\, Arduino (Platform) \,|\, Linux (Ubuntu) \,|
 
 \resumeSubHeadingListEnd
 
-\section{\textbf{Teaching Experience}}
+\section{\textbf{Academic Service}}
 \resumeSubHeadingListStart
   \resumeProject
-  {Teaching Assistant, Matrix}
+  {Teaching Assistant, Matrix and Algorithms}
   {Department of Embedded Systems Engineering, Incheon National University}
-  {Spring 2025; Fall 2025}
-  {Undergraduate course}
+  {Fall 2025; Spring 2026}
+  {Matrix: Fall 2025, Spring 2026; Algorithms: Fall 2025}
   \vspace{0.3em}
 \resumeSubHeadingListEnd
 
+\section{\textbf{Academic Distinctions and Official Recognition}}
+\small{
+Incheon National University, Aug. 21, 2026:
+\begin{itemize}
+  \item President's Recommendation for Outstanding Talent.
+  \item Dean's Commendation for Academic Excellence and Exemplary Conduct.
+  \item INU SURPRISE Outstanding Talent Certificate.
+\end{itemize}
+}
 \end{document}

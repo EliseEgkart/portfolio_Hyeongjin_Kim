@@ -1,0 +1,26 @@
+---
+title: Research in autonomous & networked systems
+permalink: /
+intro: ''
+eyebrow: Hyeongjin Kim · Hanyang University
+---
+
+<div class="home-intro">
+<p>I am <strong>Hyeongjin Kim</strong>, a researcher at the <a href="{{ site.author.laboratory_url }}">{{ site.author.laboratory | escape }} ({{ site.author.laboratory_short }})</a>, Department of Electrical Engineering, <strong>Hanyang University</strong>, pursuing an integrated M.S.–Ph.D. program under the supervision of <a href="https://junmoony.github.io/">Prof. Jun Moon</a>.</p>
+<p>My research interests focus on reinforcement learning, networks, robot learning, and robotic manipulation. My work connects learning-based decision-making with sensing, communication, and resource constraints in networked systems.</p>
+<p>Previously, I was an undergraduate researcher at the <a href="https://sites.google.com/view/hyunbumkim/home?authuser=0">ICONS Laboratory</a>, Incheon National University, advised by Prof. Hyunbum Kim. I received my bachelor's degree in Embedded Systems Engineering in August 2026.</p>
+</div>
+<h2 class="interest-heading">Research interests</h2>
+<ul class="home-interests"><li>Reinforcement Learning</li><li>Networks & Networked Systems</li><li>Robot Learning</li><li>Robotic Manipulation</li></ul>
+<div class="section-heading"><h2>Selected publications</h2><a href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">→</span></a></div>
+{% assign publications = site.publications | where: 'selected', true | sort: 'order' %}
+{% for item in publications %}{% include publication-card.html item=item %}{% endfor %}
+<div class="section-heading"><h2>Selected projects</h2><a href="{{ '/projects/' | relative_url }}">All projects <span aria-hidden="true">→</span></a></div>
+<div class="project-grid">{% assign projects = site.portfolio | where: 'selected', true | sort: 'order' %}{% for item in projects %}{% include project-card.html item=item %}{% endfor %}</div>
+<div class="section-heading"><h2>Recent honors</h2><a href="{{ '/honors/' | relative_url }}">All recognition <span aria-hidden="true">→</span></a></div>
+<ul class="news-list">
+<li><time datetime="2026-08">Aug 2026</time><span>Graduated first in class in Embedded Systems Engineering, Incheon National University. <a href="{{ '/honors/#academic-recognition' | relative_url }}">Academic recognition</a></span></li>
+<li><time datetime="2026-07">Jul 2026</time><span><strong>World Champion · First Place</strong>, RoboCup Smart Manufacturing League — team leading member. <a href="{{ '/honors/#robocup-2026' | relative_url }}">Award record</a></span></li>
+<li><time datetime="2026-06">Jun 2026</time><span><strong>Grand Prize</strong>, Graduation Project Competition — team leader, Last-Mile Delivery Robot.</span></li>
+</ul>
+<div class="contact-line"><strong>Academic profiles & contact</strong><br><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="{{ site.author.orcid }}">ORCID</a> · <a href="https://github.com/{{ site.author.github }}">GitHub</a> · <a href="{{ '/cv/' | relative_url }}">View CV</a></div>

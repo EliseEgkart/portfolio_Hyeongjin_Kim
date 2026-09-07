@@ -1,0 +1,501 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "route": "",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "route": "research/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "route": "publications/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "route": "projects/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "route": "honors/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "route": "experience/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "route": "cv/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "route": "projects/smart-stroller/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "route": "publications/split-federated-dqn/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "research/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "publications/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "projects/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "honors/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "experience/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "cv/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "projects/smart-stroller/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "publications/split-federated-dqn/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "route": "",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "route": "research/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "route": "publications/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "route": "projects/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "route": "honors/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "route": "experience/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "route": "cv/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "route": "projects/smart-stroller/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "route": "publications/split-federated-dqn/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "route": "",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "route": "research/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "route": "publications/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "route": "projects/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "route": "honors/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "route": "experience/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "route": "cv/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "route": "projects/smart-stroller/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "route": "publications/split-federated-dqn/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "research/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "publications/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "projects/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "honors/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "experience/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "cv/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "projects/smart-stroller/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "publications/split-federated-dqn/",
+      "dom": {
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    }
+  ],
+  "failures": [],
+  "interactionChecks": "Menu keyboard/Escape; dialog keyboard/focus; PDF download/open/fallback; legacy redirects; no-JS navigation and image links"
+}

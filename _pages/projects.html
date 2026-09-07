@@ -1,0 +1,15 @@
+---
+title: Projects
+permalink: /projects/
+intro: Robotics, autonomous vehicles, and embedded systems — from sensing and control to integrated real-world platforms.
+layout: archive
+---
+
+<h2>Robotics & autonomous systems</h2>
+<div class="project-grid">{% assign robotics = site.portfolio | where: 'group', 'Robotics & autonomous systems' | sort: 'order' %}{% for item in robotics %}{% include project-card.html item=item %}{% endfor %}</div>
+<h2>Embedded systems & physical computing</h2>
+{% assign embedded = site.portfolio | where: 'group', 'Embedded systems & physical computing' | sort: 'order' %}
+{% for item in embedded %}{% include project-row.html item=item %}{% endfor %}
+<h2>Additional engineering projects</h2>
+{% assign additional = site.portfolio | where: 'group', 'Additional engineering projects' | sort: 'order' %}
+{% for item in additional %}{% include project-row.html item=item %}{% endfor %}

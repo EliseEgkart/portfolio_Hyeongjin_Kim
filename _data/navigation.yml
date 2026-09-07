@@ -1,0 +1,13 @@
+main:
+  - title: Research
+    url: /research/
+  - title: Publications
+    url: /publications/
+  - title: Projects
+    url: /projects/
+  - title: Honors & Recognition
+    url: /honors/
+  - title: Experience
+    url: /experience/
+  - title: CV
+    url: /cv/

@@ -1,0 +1,142 @@
+[
+  {
+    "url": "https://conf.kics.or.kr/2025f/downloadProgram?type=program",
+    "status": 200,
+    "destination": "https://conf.kics.or.kr/2025f/downloadProgram?type=program"
+  },
+  {
+    "url": "https://doi.org/10.1109/JIOT.2025.3577655",
+    "status": 202,
+    "destination": "https://ieeexplore.ieee.org/document/11028911/"
+  },
+  {
+    "url": "https://doi.org/10.1109/JIOT.2026.3670351",
+    "status": 202,
+    "destination": "https://ieeexplore.ieee.org/document/11421391/"
+  },
+  {
+    "url": "https://doi.org/10.1109/TNSM.2026.3673324",
+    "status": 202,
+    "destination": "https://ieeexplore.ieee.org/document/11432986/"
+  },
+  {
+    "url": "https://github.com/EliseEgkart",
+    "status": 200,
+    "destination": "https://github.com/EliseEgkart"
+  },
+  {
+    "url": "https://github.com/EliseEgkart/ECS_Autonomous_driving_based_on_computer_vision",
+    "status": 200,
+    "destination": "https://github.com/EliseEgkart/ECS_Autonomous_driving_based_on_computer_vision"
+  },
+  {
+    "url": "https://github.com/EliseEgkart/ECS_Interactive_Reactions",
+    "status": 200,
+    "destination": "https://github.com/EliseEgkart/ECS_Interactive_Reactions"
+  },
+  {
+    "url": "https://github.com/EliseEgkart/capstone_final_ws",
+    "status": 200,
+    "destination": "https://github.com/EliseEgkart/capstone_final_ws"
+  },
+  {
+    "url": "https://github.com/EliseEgkart/iPBL_FPV_car_project",
+    "status": 200,
+    "destination": "https://github.com/EliseEgkart/iPBL_FPV_car_project"
+  },
+  {
+    "url": "https://github.com/UNITA2025",
+    "status": 200,
+    "destination": "https://github.com/UNITA2025"
+  },
+  {
+    "url": "https://github.com/UNITA2026",
+    "status": 200,
+    "destination": "https://github.com/UNITA2026"
+  },
+  {
+    "url": "https://github.com/hongsheng-Z/academicpages.github.io",
+    "status": 200,
+    "destination": "https://github.com/hongsheng-Z/academicpages.github.io"
+  },
+  {
+    "url": "https://ieeexplore.ieee.org/document/11028911/",
+    "status": 202,
+    "destination": "https://ieeexplore.ieee.org/document/11028911/"
+  },
+  {
+    "url": "https://ieeexplore.ieee.org/document/11421391/",
+    "status": 202,
+    "destination": "https://ieeexplore.ieee.org/document/11421391/"
+  },
+  {
+    "url": "https://ieeexplore.ieee.org/document/11432986/",
+    "status": 202,
+    "destination": "https://ieeexplore.ieee.org/document/11432986/"
+  },
+  {
+    "url": "https://moonshotfps1.notion.site/FPS-CONSOLE-PROJECT-1-efc70c403e4e4eee8b17e8ac6a4f5c15?pvs=74",
+    "status": 200,
+    "destination": "https://moonshotfps1.notion.site/FPS-CONSOLE-PROJECT-1-efc70c403e4e4eee8b17e8ac6a4f5c15?pvs=74"
+  },
+  {
+    "url": "https://orcid.org/0009-0001-6271-3052",
+    "status": 200,
+    "destination": "https://orcid.org/0009-0001-6271-3052"
+  },
+  {
+    "url": "https://sites.google.com/view/hyunbumkim/home?authuser=0",
+    "status": 200,
+    "destination": "https://sites.google.com/view/hyunbumkim/home?authuser=0"
+  },
+  {
+    "url": "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12035067",
+    "status": 200,
+    "destination": "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12035067"
+  },
+  {
+    "url": "https://www.mt.co.kr/policy/2025/07/02/2025070211262947614",
+    "status": 200,
+    "destination": "https://www.mt.co.kr/policy/2025/07/02/2025070211262947614"
+  },
+  {
+    "url": "https://www.youtube.com/@%EA%B9%80%ED%98%95%EC%A7%84-l1u",
+    "status": 200,
+    "destination": "https://www.youtube.com/@%EA%B9%80%ED%98%95%EC%A7%84-l1u"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/RJIRCw1mdC4",
+    "status": 200,
+    "destination": "https://www.youtube.com/shorts/RJIRCw1mdC4"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=8pNXA40yGwk",
+    "status": 200,
+    "destination": "https://www.youtube.com/watch?v=8pNXA40yGwk"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=FVn5UPFTrjI",
+    "status": 200,
+    "destination": "https://www.youtube.com/watch?v=FVn5UPFTrjI"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=PAlAfAtIXKI&list=PLEfc0jLEgPC10Frw5etj4bmRtMfAUXsi3&index=5",
+    "status": 200,
+    "destination": "https://www.youtube.com/watch?v=PAlAfAtIXKI&list=PLEfc0jLEgPC10Frw5etj4bmRtMfAUXsi3&index=5"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=_1o2Oad9vVQ",
+    "status": 200,
+    "destination": "https://www.youtube.com/watch?v=_1o2Oad9vVQ"
+  },
+  {
+    "url": "https://youtu.be/RuwLuphqz50",
+    "status": 200,
+    "destination": "https://www.youtube.com/watch?v=RuwLuphqz50&feature=youtu.be"
+  },
+  {
+    "url": "https://youtube.com/shorts/7Net92QTvlI?feature=share",
+    "status": 200,
+    "destination": "https://www.youtube.com/shorts/7Net92QTvlI?feature=share"
+  }
+]

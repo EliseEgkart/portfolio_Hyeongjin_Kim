@@ -1,0 +1,10 @@
+<article class="project-card">
+  <a class="project-image" href="{{ include.item.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ include.item.image | relative_url }}" alt="" loading="lazy" width="640" height="420"></a>
+  <div class="project-body">
+    <p class="eyebrow">{% if include.item.period %}{{ include.item.period }}{% else %}ROS 2 · Sensor fusion{% endif %}</p>
+    <h3><a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a></h3>
+    {% if include.item.role %}<p class="project-role">{{ include.item.role }}</p>{% endif %}
+    <p>{{ include.item.summary }}</p>
+    <a class="detail-link" href="{{ include.item.url | relative_url }}" aria-label="Read about {{ include.item.title | escape }}">Project details <span aria-hidden="true">→</span></a>
+  </div>
+</article>

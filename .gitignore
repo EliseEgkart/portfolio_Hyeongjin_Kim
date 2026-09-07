@@ -1,0 +1,11 @@
+_site/
+.bundle/
+vendor/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+node_modules/
+Academic_CV/*.aux
+Academic_CV/*.log
+Academic_CV/*.out
+Academic_CV/*.synctex.gz

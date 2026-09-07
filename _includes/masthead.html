@@ -1,0 +1,9 @@
+<header class="masthead">
+<div class="masthead__inner-wrap">
+  <a class="site-title" href="{{ '/' | relative_url }}" aria-label="Hyeongjin Kim — Home">{{ site.title }}<span class="site-title-dot" aria-hidden="true">.</span></a>
+  <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false"><span class="menu-icon" aria-hidden="true">☰</span> Menu</button>
+  <nav id="site-nav" aria-label="Main navigation">
+    <ul>{% for link in site.data.navigation.main %}<li><a href="{{ link.url | relative_url }}"{% if page.url contains link.url %} aria-current="page"{% endif %}>{{ link.title }}</a></li>{% endfor %}</ul>
+  </nav>
+</div>
+</header>

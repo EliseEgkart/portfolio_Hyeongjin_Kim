@@ -1,0 +1,12 @@
+{
+  "status": 200,
+  "contentType": "application/pdf",
+  "frames": [
+    "http://127.0.0.1:4077/portfolio_Hyeongjin_Kim/cv/",
+    "http://127.0.0.1:4077/portfolio_Hyeongjin_Kim/files/Hyeongjin_Kim_CV.pdf#view=FitH&pagemode=none",
+    "chrome-extension://mhjfbmdgcfjbbpaeojofohoefgiehjai/index.html",
+    "http://127.0.0.1:4077/portfolio_Hyeongjin_Kim/files/Hyeongjin_Kim_CV.pdf#view=FitH&pagemode=none"
+  ],
+  "pdfViewer": true,
+  "sameBytes": true
+}

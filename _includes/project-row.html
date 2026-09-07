@@ -1,0 +1,9 @@
+<article class="additional-project">
+  <a href="{{ include.item.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ include.item.image | relative_url }}" alt="" width="96" height="78" loading="lazy"></a>
+  <div>
+    <p class="eyebrow">{{ include.item.period }} · {{ include.item.role }}</p>
+    <h3><a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a></h3>
+    <p>{{ include.item.summary }}</p>
+    <a class="detail-link" href="{{ include.item.url | relative_url }}" aria-label="Read about {{ include.item.title | escape }}">Project details <span aria-hidden="true">→</span></a>
+  </div>
+</article>

@@ -1,0 +1,247 @@
+[
+  {
+    "source": "images/publications/2026-iotj-sfl-dqn.png",
+    "destination": "images/publications/2026-iotj-sfl-dqn.webp",
+    "original_bytes": 716162,
+    "web_bytes": 269708,
+    "lossless": false
+  },
+  {
+    "source": "images/publications/kics-2025-presentation.png",
+    "destination": "images/publications/kics-2025-presentation.webp",
+    "original_bytes": 3127400,
+    "web_bytes": 269290,
+    "lossless": false
+  },
+  {
+    "source": "images/publications/2025-iotj-resting-drone.png",
+    "destination": "images/publications/2025-iotj-resting-drone.webp",
+    "original_bytes": 1055747,
+    "web_bytes": 86258,
+    "lossless": false
+  },
+  {
+    "source": "images/publications/kics-2024-presentation.png",
+    "destination": "images/publications/kics-2024-presentation.webp",
+    "original_bytes": 2629853,
+    "web_bytes": 303512,
+    "lossless": false
+  },
+  {
+    "source": "images/publications/2026-tnsm-v2x-network.png",
+    "destination": "images/publications/2026-tnsm-v2x-network.webp",
+    "original_bytes": 406083,
+    "web_bytes": 175668,
+    "lossless": false
+  },
+  {
+    "source": "images/profile/hyeongjin-kim.jpg",
+    "destination": "images/profile/hyeongjin-kim.webp",
+    "original_bytes": 303254,
+    "web_bytes": 383366,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/tanghulu-maker.png",
+    "destination": "images/projects/tanghulu-maker.webp",
+    "original_bytes": 1085369,
+    "web_bytes": 64600,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/unity-game-project.png",
+    "destination": "images/projects/unity-game-project.webp",
+    "original_bytes": 827767,
+    "web_bytes": 65232,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/fan-li-wireless-fan.png",
+    "destination": "images/projects/fan-li-wireless-fan.webp",
+    "original_bytes": 2244648,
+    "web_bytes": 131442,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/intelligent-book-arrangement-robot.png",
+    "destination": "images/projects/intelligent-book-arrangement-robot.webp",
+    "original_bytes": 1876005,
+    "web_bytes": 201476,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/fps-gun-console.png",
+    "destination": "images/projects/fps-gun-console.webp",
+    "original_bytes": 18190236,
+    "web_bytes": 1928956,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/erp42-autonomous-driving.png",
+    "destination": "images/projects/erp42-autonomous-driving.webp",
+    "original_bytes": 3607933,
+    "web_bytes": 256478,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/line-tracing-rc-car.png",
+    "destination": "images/projects/line-tracing-rc-car.webp",
+    "original_bytes": 24007544,
+    "web_bytes": 1564626,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/last-mile-delivery-robot.png",
+    "destination": "images/projects/last-mile-delivery-robot.webp",
+    "original_bytes": 1410698,
+    "web_bytes": 155372,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/virtual-gesture-interface-board.png",
+    "destination": "images/projects/virtual-gesture-interface-board.webp",
+    "original_bytes": 870796,
+    "web_bytes": 68364,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/fpv-rc-car.png",
+    "destination": "images/projects/fpv-rc-car.webp",
+    "original_bytes": 2053436,
+    "web_bytes": 167996,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/resting-drone.png",
+    "destination": "images/projects/resting-drone.webp",
+    "original_bytes": 2172448,
+    "web_bytes": 184258,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/robocup-sml-mobile-manipulator.png",
+    "destination": "images/projects/robocup-sml-mobile-manipulator.webp",
+    "original_bytes": 9942134,
+    "web_bytes": 1380408,
+    "lossless": false
+  },
+  {
+    "source": "images/projects/smart-stroller.jpg",
+    "destination": "images/projects/smart-stroller.webp",
+    "original_bytes": 4185854,
+    "web_bytes": 2598260,
+    "lossless": false
+  },
+  {
+    "source": "images/honors/2023-12-software-contest-grand-prize.png",
+    "destination": "images/honors/2023-12-software-contest-grand-prize.webp",
+    "original_bytes": 413276,
+    "web_bytes": 207532,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/2026-robocup.png",
+    "destination": "images/honors/2026-robocup.webp",
+    "original_bytes": 2220542,
+    "web_bytes": 801038,
+    "lossless": false
+  },
+  {
+    "source": "images/honors/2025-12-electric-vehicle-award.png",
+    "destination": "images/honors/2025-12-electric-vehicle-award.webp",
+    "original_bytes": 294883,
+    "web_bytes": 149392,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/2021-11-autonomous-driving-bronze-award.png",
+    "destination": "images/honors/2021-11-autonomous-driving-bronze-award.webp",
+    "original_bytes": 371589,
+    "web_bytes": 166598,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/2022-01-inu-maker-grand-prize.png",
+    "destination": "images/honors/2022-01-inu-maker-grand-prize.webp",
+    "original_bytes": 471500,
+    "web_bytes": 221242,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/deans-commendation.jpg",
+    "destination": "images/honors/deans-commendation.webp",
+    "original_bytes": 398691,
+    "web_bytes": 1023546,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/2024-11-skk-capstone-bronze-award.png",
+    "destination": "images/honors/2024-11-skk-capstone-bronze-award.webp",
+    "original_bytes": 255799,
+    "web_bytes": 153460,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/robocup-2026-team.jpg",
+    "destination": "images/honors/robocup-2026-team.webp",
+    "original_bytes": 5135325,
+    "web_bytes": 2509298,
+    "lossless": false
+  },
+  {
+    "source": "images/honors/2024-09-inu-capstone-grand-prize.png",
+    "destination": "images/honors/2024-09-inu-capstone-grand-prize.webp",
+    "original_bytes": 306119,
+    "web_bytes": 171082,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/bachelor-of-engineering-diploma.jpg",
+    "destination": "images/honors/bachelor-of-engineering-diploma.webp",
+    "original_bytes": 309687,
+    "web_bytes": 688924,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/2026-06-graduation-project-grand-prize.png",
+    "destination": "images/honors/2026-06-graduation-project-grand-prize.webp",
+    "original_bytes": 688375,
+    "web_bytes": 335602,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/2025-07-h-mobility-class.png",
+    "destination": "images/honors/2025-08-h-mobility-class.webp",
+    "original_bytes": 117404,
+    "web_bytes": 57350,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/presidents-recommendation.jpg",
+    "destination": "images/honors/presidents-recommendation.webp",
+    "original_bytes": 433538,
+    "web_bytes": 1423876,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/inu-surprise-outstanding-talent.jpg",
+    "destination": "images/honors/inu-surprise-outstanding-talent.webp",
+    "original_bytes": 413144,
+    "web_bytes": 1273538,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/2024-11-national-capstone-special-award.png",
+    "destination": "images/honors/2024-11-national-capstone-special-award.webp",
+    "original_bytes": 285821,
+    "web_bytes": 145142,
+    "lossless": true
+  },
+  {
+    "source": "images/honors/2021-12-smart-mobility-award.png",
+    "destination": "images/honors/2021-12-smart-mobility-award.webp",
+    "original_bytes": 326861,
+    "web_bytes": 151186,
+    "lossless": true
+  }
+]

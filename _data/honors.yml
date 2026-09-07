@@ -1,0 +1,95 @@
+competitive:
+- date: '2026-07-05'
+  display_date: Jul 2026
+  title: RoboCup Smart Manufacturing League — World Champion / First Place
+  issuer: RoboCup Industrial
+  role: Team award · Team leading member
+  image: /images/honors/2026-robocup.webp
+  korean: null
+- date: '2026-06-02'
+  display_date: Jun 2026
+  title: Graduation Project Competition — Grand Prize
+  issuer: Dean, College of Information Technology, Incheon National University
+  role: Team award · Team leader
+  image: /images/honors/2026-06-graduation-project-grand-prize.webp
+  korean: 임베디드시스템공학과 졸업작품발표 대회 대상
+- date: 2025-12
+  display_date: Dec 2025
+  title: Self-Built Electric Vehicle Competition — Grand Prize
+  issuer: Future Automotive Convergence Innovation Center, Incheon National University
+  role: Team award · Team leader
+  image: /images/honors/2025-12-electric-vehicle-award.webp
+  korean: 자작 전기차 경진대회 대상
+- date: '2025-08-25'
+  display_date: Aug 2025
+  title: H-Mobility Class — Outstanding Learner Award
+  issuer: Head of R&D Division, Hyundai Motor Group
+  role: Individual recognition
+  image: /images/honors/2025-08-h-mobility-class.webp
+  korean: H-Mobility Class 우수학습자상
+- date: 2024-11
+  display_date: Nov 2024
+  title: National Creative Capstone Design Competition — Special Prize
+  issuer: President, Korea Technopark Promotion Association
+  role: Team award · Team leader
+  image: /images/honors/2024-11-national-capstone-special-award.webp
+  korean: 창의적 종합설계 전국 경진대회 특별상
+- date: 2024-11
+  display_date: Nov 2024
+  title: Sungkyunkwan University Consortium Creative Capstone Design Competition — Bronze Prize
+  issuer: Engineering Education Innovation Center, Sungkyunkwan University
+  role: Team award · Team leader
+  image: /images/honors/2024-11-skk-capstone-bronze-award.webp
+  korean: null
+- date: 2024-09
+  display_date: Sep 2024
+  title: INU Creative Capstone Design Competition — Grand Prize
+  issuer: President, Incheon National University
+  role: Team award · Team leader
+  image: /images/honors/2024-09-inu-capstone-grand-prize.webp
+  korean: null
+- date: 2023-12
+  display_date: Dec 2023
+  title: College of Information Technology Software Contest — Grand Prize
+  issuer: Dean, College of Information Technology, Incheon National University
+  role: Team award · Team leader
+  image: /images/honors/2023-12-software-contest-grand-prize.webp
+  korean: null
+- date: 2022-01
+  display_date: Jan 2022
+  title: INU Maker Competition — Grand Prize
+  issuer: President, Incheon National University
+  role: Team award · Team leader
+  image: /images/honors/2022-01-inu-maker-grand-prize.webp
+  korean: null
+- date: 2021-12
+  display_date: Dec 2021
+  title: Smart Mobility Competition — Honorable Mention
+  issuer: Engineering Education Innovation Center, Incheon National University
+  role: Team award · Team leader
+  image: /images/honors/2021-12-smart-mobility-award.webp
+  korean: null
+- date: 2021-11
+  display_date: Nov 2021
+  title: INU Autonomous Driving Software Competition — Bronze Prize
+  issuer: Dean, College of Information Technology, Incheon National University
+  role: Team award · Team member
+  image: /images/honors/2021-11-autonomous-driving-bronze-award.webp
+  korean: null
+academic:
+- title: President’s Recommendation for Outstanding Talent
+  issuer: President, Incheon National University
+  description: Official recommendation recognizing outstanding university talent.
+  image: /images/honors/presidents-recommendation.webp
+- title: Dean’s Commendation for Academic Excellence
+  issuer: Dean, College of Information Technology, Incheon National University
+  description: Commendation for excellent academic performance and exemplary conduct.
+  image: /images/honors/deans-commendation.webp
+- title: Bachelor of Engineering Diploma
+  issuer: Incheon National University
+  description: Official English-language degree certificate.
+  image: /images/honors/bachelor-of-engineering-diploma.webp
+- title: INU SURPRISE Outstanding Talent Certificate
+  issuer: President, Incheon National University
+  description: Certification of excellence across curricular and extracurricular education.
+  image: /images/honors/inu-surprise-outstanding-talent.webp

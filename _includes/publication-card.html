@@ -1,0 +1,10 @@
+<article class="publication-row">
+  <a class="publication-image" href="{{ include.item.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ include.item.image | relative_url }}" alt="" loading="lazy" width="320" height="220"></a>
+  <div class="publication-body">
+    <p class="eyebrow">{{ include.item.short_venue }} · {{ include.item.display_date }}</p>
+    <h3><a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a></h3>
+    <p class="publication-authors">{% include authors.html authors=include.item.authors %}</p>
+    <p class="publication-venue">{{ include.item.venue }}{% if include.item.volume %}, {{ include.item.volume }}{% if include.item.issue %}({{ include.item.issue }}){% endif %}{% endif %}{% if include.item.pages %}, {{ include.item.pages }}{% endif %}</p>
+    {% include publication-links.html item=include.item %}
+  </div>
+</article>

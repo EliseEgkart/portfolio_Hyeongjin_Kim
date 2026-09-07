@@ -1,0 +1,15 @@
+---
+layout: single
+---
+<p class="eyebrow">{{ page.group }}{% if page.period %} · {{ page.period }}{% endif %}</p>
+{% if page.role %}<p><strong>Role:</strong> {{ page.role }}</p>{% endif %}
+<p class="lead">{{ page.summary }}</p>
+<figure class="detail-figure">
+  <a href="{{ page.image | relative_url }}" data-lightbox aria-label="Enlarge {{ page.image_alt | escape }}"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}" width="960" height="640"></a>
+  <figcaption>{{ page.image_alt }}</figcaption>
+</figure>
+{{ content }}
+<h2>Core technology</h2>
+<ul class="tag-list">{% for technology in page.technologies %}<li>{{ technology }}</li>{% endfor %}</ul>
+{% if page.external_url %}<p><a class="button" href="{{ page.external_url }}">{{ page.external_label }} <span aria-hidden="true">↗</span></a></p>{% endif %}
+<p class="back-link"><a href="{{ '/projects/' | relative_url }}">← All projects</a></p>

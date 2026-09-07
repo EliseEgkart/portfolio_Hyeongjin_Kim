@@ -1,0 +1,15 @@
+---
+layout: single
+---
+<p class="eyebrow">{{ page.category }} · {{ page.display_date }}</p>
+<p class="publication-authors">{% include authors.html authors=page.authors %}</p>
+<p class="publication-venue"><em>{{ page.venue }}</em>{% if page.volume %}, vol. {{ page.volume }}{% endif %}{% if page.issue %}, no. {{ page.issue }}{% endif %}{% if page.pages %}, pp. {{ page.pages }}{% endif %}.</p>
+{% include publication-links.html item=page %}
+{% if page.image %}
+<figure class="detail-figure">
+  <a href="{{ page.image | relative_url }}" data-lightbox aria-label="Enlarge {{ page.image_alt | escape }}"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}" width="960" height="600"></a>
+  <figcaption>{{ page.image_alt }}</figcaption>
+</figure>
+{% endif %}
+{{ content }}
+<p class="back-link"><a href="{{ '/publications/' | relative_url }}">← All publications</a></p>

@@ -1,0 +1,7 @@
+<div class="text-links">
+  {% if include.item.doi %}<a href="https://doi.org/{{ include.item.doi }}" aria-label="DOI for {{ include.item.title | escape }}">DOI <span aria-hidden="true">↗</span></a>{% endif %}
+  {% if include.item.publisher_url %}<a href="{{ include.item.publisher_url }}">{{ include.item.publisher_label | default: 'Publisher' }} <span aria-hidden="true">↗</span></a>{% endif %}
+  {% if include.item.pdf_url %}<a href="{{ include.item.pdf_url | relative_url }}">PDF</a>{% endif %}
+  {% if include.item.code_url %}<a href="{{ include.item.code_url }}">Code <span aria-hidden="true">↗</span></a>{% endif %}
+  {% if include.item.bibtex %}<a href="{{ include.item.bibtex | relative_url }}" download>BibTeX</a>{% endif %}
+</div>

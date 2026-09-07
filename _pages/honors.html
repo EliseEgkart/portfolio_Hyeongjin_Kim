@@ -1,0 +1,14 @@
+---
+title: Honors & Recognition
+permalink: /honors/
+intro: Competition results, academic distinctions, and official recognition, with supporting documents.
+redirect_from:
+- /awards/
+---
+
+<h2>Competitive awards</h2>
+<div class="honor-highlight" id="robocup-2026"><div><p class="eyebrow">RoboCup 2026 · July 5, 2026</p><h3>World Champion · First Place</h3><p>RoboCup Industrial, Smart Manufacturing League</p><p><strong>Team award</strong> · Team leading member</p><a class="detail-link" href="{{ '/projects/robocup-sml-mobile-manipulator/' | relative_url }}">Mobile manipulator project <span aria-hidden="true">→</span></a></div><a href="{{ '/images/honors/robocup-2026-team.webp' | relative_url }}" data-lightbox data-caption="RoboCup 2026 Smart Manufacturing League — team award"><img src="{{ '/images/honors/robocup-2026-team.webp' | relative_url }}" alt="The RoboCup Smart Manufacturing League team at the award ceremony" width="320" height="240" loading="lazy"></a></div>
+<ul class="honor-list">{% for honor in site.data.honors.competitive %}<li class="honor-row"><time datetime="{{ honor.date }}">{{ honor.display_date }}</time><div><h3>{{ honor.title }}</h3><p>{{ honor.issuer }}</p>{% if honor.role %}<p>{{ honor.role }}</p>{% endif %}{% if honor.korean %}<p lang="ko">{{ honor.korean }}</p>{% endif %}</div><a class="evidence-thumbnail" href="{{ honor.image | relative_url }}" data-lightbox data-caption="{{ honor.title | escape }} — {{ honor.display_date }}" aria-label="View evidence: {{ honor.title | escape }}"><img src="{{ honor.image | relative_url }}" alt="{{ honor.title | escape }} — supporting document or photograph" width="58" height="73" loading="lazy"><span>View ↗</span></a></li>{% endfor %}</ul>
+<h2 id="academic-recognition">Academic distinctions & official recognition</h2>
+<p>Graduated first in class in the Department of Embedded Systems Engineering, Incheon National University, in August 2026. GPA: 4.28 / 4.5.</p>
+<div class="document-grid">{% for item in site.data.honors.academic %}<article class="document-card"><a href="{{ item.image | relative_url }}" data-lightbox data-caption="{{ item.title | escape }}" aria-label="Enlarge {{ item.title | escape }}"><img src="{{ item.image | relative_url }}" alt="{{ item.title | escape }}" width="72" height="102" loading="lazy"></a><div><h3>{{ item.title }}</h3><p>{{ item.issuer }}<br><time datetime="2026-08-21">August 21, 2026</time></p><p>{{ item.description }}</p><a href="{{ item.image | relative_url }}" data-lightbox data-caption="{{ item.title | escape }}">View document <span aria-hidden="true">↗</span></a></div></article>{% endfor %}</div>

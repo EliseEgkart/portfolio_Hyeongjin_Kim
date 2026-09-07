@@ -1,0 +1,134 @@
+{
+  "cases": 12,
+  "failures": [],
+  "results": [
+    {
+      "width": 320,
+      "route": "publications/",
+      "title": "Publications",
+      "overflow": false,
+      "titles": [
+        "Publications",
+        "Resting Drone-Enabled Enhanced ITS Coverage and V2X Integration Network Management for Urban Mobility Service",
+        "Split Federated Learning-Enabled Deep Q-Networks for Generalized Path Planning in Distributed IoT Edge Platform",
+        "A Resting Drone-Enabled Surveillance Framework for Real-Time Monitoring With Resource Efficiency in IoT-Based Smart City",
+        "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments",
+        "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "publications/kics-2024/",
+      "title": "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication",
+      "overflow": false,
+      "titles": [
+        "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "publications/kics-2025/",
+      "title": "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments",
+      "overflow": false,
+      "titles": [
+        "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "publications/",
+      "title": "Publications",
+      "overflow": false,
+      "titles": [
+        "Publications",
+        "Resting Drone-Enabled Enhanced ITS Coverage and V2X Integration Network Management for Urban Mobility Service",
+        "Split Federated Learning-Enabled Deep Q-Networks for Generalized Path Planning in Distributed IoT Edge Platform",
+        "A Resting Drone-Enabled Surveillance Framework for Real-Time Monitoring With Resource Efficiency in IoT-Based Smart City",
+        "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments",
+        "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "publications/kics-2024/",
+      "title": "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication",
+      "overflow": false,
+      "titles": [
+        "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "publications/kics-2025/",
+      "title": "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments",
+      "overflow": false,
+      "titles": [
+        "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "publications/",
+      "title": "Publications",
+      "overflow": false,
+      "titles": [
+        "Publications",
+        "Resting Drone-Enabled Enhanced ITS Coverage and V2X Integration Network Management for Urban Mobility Service",
+        "Split Federated Learning-Enabled Deep Q-Networks for Generalized Path Planning in Distributed IoT Edge Platform",
+        "A Resting Drone-Enabled Surveillance Framework for Real-Time Monitoring With Resource Efficiency in IoT-Based Smart City",
+        "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments",
+        "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "publications/kics-2024/",
+      "title": "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication",
+      "overflow": false,
+      "titles": [
+        "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "publications/kics-2025/",
+      "title": "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments",
+      "overflow": false,
+      "titles": [
+        "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "publications/",
+      "title": "Publications",
+      "overflow": false,
+      "titles": [
+        "Publications",
+        "Resting Drone-Enabled Enhanced ITS Coverage and V2X Integration Network Management for Urban Mobility Service",
+        "Split Federated Learning-Enabled Deep Q-Networks for Generalized Path Planning in Distributed IoT Edge Platform",
+        "A Resting Drone-Enabled Surveillance Framework for Real-Time Monitoring With Resource Efficiency in IoT-Based Smart City",
+        "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments",
+        "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "publications/kics-2024/",
+      "title": "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication",
+      "overflow": false,
+      "titles": [
+        "Analysis of V2V Shortest Path Search and Connection Strategies in ITS Environment Using Low-Power Short-Range Communication"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "publications/kics-2025/",
+      "title": "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments",
+      "overflow": false,
+      "titles": [
+        "Analysis of Opportunistic Wi-Fi/LTE Connectivity Strategies for Outdoor Autonomous Driving Platforms in ITS Environments"
+      ]
+    }
+  ]
+}

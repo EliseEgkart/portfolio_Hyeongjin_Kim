@@ -1,0 +1,19 @@
+<div class="author__avatar"><img src="{{ site.author.avatar | relative_url }}" alt="Hyeongjin Kim presenting a robotics project" width="160" height="160"></div>
+<div class="author__content">
+  <p class="author__name">{{ site.author.name }}<span lang="ko">{{ site.author.korean_name }}</span></p>
+  <p class="author__bio">{{ site.author.bio }}<br>{{ site.author.department }}<br><strong>{{ site.author.employer }}</strong></p>
+  <p class="author__program">{{ site.author.program }}</p>
+</div>
+<div class="author__urls-wrapper">
+  <ul class="author__urls social-icons">
+    <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ site.author.location }}</li>
+    {% if site.author.laboratory_url %}<li><a href="{{ site.author.laboratory_url }}" aria-label="{{ site.author.laboratory | escape }} website"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> {{ site.author.laboratory_short }} · Laboratory</a></li>{% endif %}
+    <li><a href="mailto:{{ site.author.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a></li>
+    <li><a href="https://github.com/{{ site.author.github }}"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
+    {% if site.author.orcid %}<li><a href="{{ site.author.orcid }}"><i class="fa-brands fa-orcid" aria-hidden="true"></i> ORCID</a></li>{% endif %}
+    {% if site.author.linkedin %}<li><a href="{{ site.author.linkedin }}">LinkedIn</a></li>{% endif %}
+    {% if site.author.googlescholar %}<li><a href="{{ site.author.googlescholar }}">Google Scholar</a></li>{% endif %}
+    <li><a href="{{ site.author.youtube }}"><i class="fa-brands fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+    <li class="sidebar-cv"><a href="{{ '/cv/' | relative_url }}"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Curriculum vitae <span aria-hidden="true">→</span></a></li>
+  </ul>
+</div>

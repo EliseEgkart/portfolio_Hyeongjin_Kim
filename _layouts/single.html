@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div id="main" role="main" tabindex="-1">
+{% include sidebar.html %}
+<article class="page">
+  <div class="page__inner-wrap">
+    <header class="page-heading">
+      {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+      <h1 class="page__title">{{ page.title }}</h1>
+      {% if page.intro %}<p class="page-intro">{{ page.intro }}</p>{% endif %}
+    </header>
+    <section class="page__content">{{ content }}</section>
+  </div>
+</article>
+</div>
