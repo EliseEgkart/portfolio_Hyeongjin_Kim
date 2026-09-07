@@ -24,7 +24,7 @@ img { max-width: 100%; }
 #main::after, #main::before { content: none; }
 .sidebar { position: sticky; top: 118px; float: none; margin: 0; padding: 0; width: auto; max-width: none; height: auto; max-height: calc(100vh - 140px); overflow: auto; transform: none; }
 .author__avatar { display: block; width: 150px; height: 150px; margin: 0 0 23px; overflow: hidden; border-radius: 50%; background: var(--soft); }
-.author__avatar img { width: 100%; max-width: none; height: 100%; padding: 0; border: 0; border-radius: 0; object-fit: cover; object-position: center 30%; }
+.author__avatar img { width: 100%; max-width: none; height: 100%; padding: 0; border: 0; border-radius: 0; object-fit: cover; transform: scale(3.068); transform-origin: 52% 39%; }
 .author__content { display: block; padding: 0; }
 .author__name { margin: 0 0 16px; font-size: 22px !important; font-weight: 700; letter-spacing: -.5px; line-height: 1.35 !important; }
 .author__name span { display: block; margin-top: 5px; color: var(--muted); font-size: 14px; font-weight: 400; letter-spacing: 1px; }
@@ -52,8 +52,9 @@ img { max-width: 100%; }
 .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 37px; margin-bottom: 5px; border-bottom: 1px solid var(--line); }
 .section-heading h2 { border: 0; margin: 0; padding: 0 0 11px; }
 .section-heading > a { font-size: 12px; white-space: nowrap; text-decoration: none; }
-.home-intro { max-width: 790px; font-size: 16px; line-height: 1.9; }
-.home-intro p { margin-bottom: 15px; }
+.home-intro { width: 100%; font-size: 16px; line-height: 1.9; }
+.home-intro p { margin-bottom: 15px; text-wrap: pretty; }
+.person-name { white-space: nowrap; }
 .home-interests { display: flex; flex-wrap: wrap; gap: 5px 20px; padding: 0; margin: 18px 0 0; list-style: none; font-size: 13px; color: #496172; }
 .home-interests li::before { content: ""; display: inline-block; width: 4px; height: 4px; margin: 0 9px 3px 0; border-radius: 50%; background: #608496; }
 .publication-row { display: grid; grid-template-columns: 174px minmax(0,1fr); align-items: start; gap: 24px; padding: 25px 0; border-bottom: 1px solid #e8edf1; }
