@@ -24,7 +24,7 @@ img { max-width: 100%; }
 #main::after, #main::before { content: none; }
 .sidebar { position: sticky; top: 118px; float: none; margin: 0; padding: 0; width: auto; max-width: none; height: auto; max-height: calc(100vh - 140px); overflow: auto; transform: none; }
 .author__avatar { display: block; width: 150px; height: 150px; margin: 0 0 23px; overflow: hidden; border-radius: 50%; background: var(--soft); }
-.author__avatar img { width: 100%; max-width: none; height: 100%; padding: 0; border: 0; border-radius: 0; object-fit: cover; transform: scale(2.6); transform-origin: 52% 39%; }
+.author__avatar img { width: 100%; max-width: none; height: 100%; padding: 0; border: 0; border-radius: 0; object-fit: cover; object-position: center 30%; }
 .author__content { display: block; padding: 0; }
 .author__name { margin: 0 0 16px; font-size: 22px !important; font-weight: 700; letter-spacing: -.5px; line-height: 1.35 !important; }
 .author__name span { display: block; margin-top: 5px; color: var(--muted); font-size: 14px; font-weight: 400; letter-spacing: 1px; }

@@ -11,7 +11,7 @@
 <meta property="og:image" content="{{ page.image | default: site.author.avatar | absolute_url }}">
 <meta name="theme-color" content="#183b56">
 <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <script>document.documentElement.classList.replace('no-js','js');</script>
 {% if page.url == '/' %}
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":{{ site.author.name | jsonify }},"alternateName":"김형진","url":{{ '/' | absolute_url | jsonify }},"affiliation":{"@type":"Organization","name":"Hanyang University"},"sameAs":["https://github.com/{{ site.author.github }}",{{ site.author.orcid | jsonify }}]}</script>
