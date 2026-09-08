@@ -2,7 +2,7 @@ locale: en-US
 site_theme: default
 title: Hyeongjin Kim
 name: Hyeongjin Kim
-description: Academic website of Hyeongjin Kim, focusing on UAVs, reinforcement learning, autonomous systems, robot learning, and AI-enabled networked systems.
+description: Hyeongjin Kim at COLAB, Hanyang University. Research interests in reinforcement learning, networks, robot learning, and robotic manipulation.
 url: https://eliseegkart.github.io
 baseurl: /portfolio_Hyeongjin_Kim
 repository: EliseEgkart/portfolio_Hyeongjin_Kim

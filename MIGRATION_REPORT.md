@@ -55,7 +55,7 @@ Primary DOI records are stored in `docs/metadata/`. The DOI content-negotiation 
 | SFL–DQN 2026 | CV says Edge Computing; website places Hyunbum Kim second; March date reflects earlier record | Title ends **Distributed IoT Edge Platform**. Authors: Hyeongjin Kim, Jalel Ben-Othman, Byungju Lee, Hyunbum Kim. Final issue: vol. 13, no. 11, pp. 23495–23505, **June 1, 2026**. [DOI](https://doi.org/10.1109/JIOT.2026.3670351). |
 | Resting-drone surveillance 2025 | Smart Cities in CV; inconsistent capitalization | Exact publisher title ends **IoT-Based Smart City**, authors Hyeongjin Kim, Hyunbum Kim, Mohsen Guizani; vol. 12, no. 16, pp. 33995–34006, **August 15, 2025**. [DOI](https://doi.org/10.1109/JIOT.2025.3577655). |
 | KICS 2024 | September on website, October in CV; paraphrased Korean title | Exact Korean title from proceedings; **November 2024**, pp. 1101–1102; author order unchanged. [Official proceedings distribution record](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12035067). |
-| KICS 2025 | October date; the 2024 DBpia article duplicated as its link | **November 21, 2025**, oral session **19C-1**, printed program p. 64. Exact title/authors verified against the [KICS official program](https://conf.kics.or.kr/2025f/downloadProgram?type=program). Replaced the wrong proceedings URL with this verified program link. A distinct article DOI/DBpia link was not invented. |
+| KICS 2025 | October date; the 2024 DBpia article duplicated as its link | **November 21, 2025**, oral session **19C-1**, printed program p. 64. Exact title/authors verified against the [KICS official program](https://conf.kics.or.kr/2025f/downloadProgram?type=program). The user later provided the [correct DBpia proceedings record](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12566863), which confirms **pp. 455–456**. Proceedings, program, website citation, and CV are now linked consistently. No DOI is asserted. |
 | Graduation Project Grand Prize | Filename/modal caption say 2025 | Certificate explicitly says **June 2, 2026**; asset renamed accordingly. Team-leader role preserved. |
 | H-Mobility Outstanding Learner | Website/CV and filename say July 2025 | Certificate explicitly says **August 25, 2025**; website, CV and filename corrected. The training/ambassador activity itself remains April–July 2025. |
 | ICONS and major projects | Stale Present in CV | ICONS ends June 2026, RoboCup project July 2026, delivery robot June 2026, following the more specific source website dates. |
@@ -95,7 +95,7 @@ The user subsequently supplied the current Hanyang laboratory URL, [Control & Op
 - Reused every meaningful publication/project image, conference photograph, award record and numbered recognition document.
 - Images organized under `images/profile/`, `images/publications/`, `images/projects/`, and `images/honors/`. No empty Experience image folder was manufactured because that page had no source image.
 - Encoded images to WebP, preserving composition and dimensions and applying camera EXIF orientation. This also fixes legacy PNG filenames that actually contained JPEG/MPO data. Certificate images are encoded losslessly; photos/figures use quality 90. No generated imagery was used.
-- Image bytes reduced from **93,155,921** to **19,734,076** (about **79%**). Detailed per-asset paths and byte counts are in `docs/asset-migration.json`. The H-Mobility final filename was subsequently changed from `2025-07` to `2025-08` to match the inspected certificate.
+- At the initial migration, image bytes were reduced from **93,155,921** to **19,734,076** (about **79%**). `docs/asset-migration.json` records that initial snapshot, before the user's later lossless RoboCup, ERP42, and Fan-Li image replacements. The H-Mobility final filename was subsequently changed from `2025-07` to `2025-08` to match the inspected certificate.
 - Sidebar portrait uses the original project-presentation photo with a CSS circular crop. Project photos and figures use contained aspect-ratio frames, preserving diagram content.
 - Every evidence thumbnail links directly to its full image if JavaScript is unavailable; enhanced dialogs support keyboard access, Escape, a close button, focus return, and a full-size link.
 
@@ -109,9 +109,11 @@ The Git remote and existing CV portfolio URL confirm a **project site**, not a u
 - `Academic_CV/Academic_CV.pdf` remains available and byte-identical to `files/Hyeongjin_Kim_CV.pdf`.
 - All internal image/CSS/JS/PDF/page paths use Jekyll URL helpers.
 - `.github/workflows/pages.yml` builds and verifies pull requests and deploys pushes to the main branch using GitHub Pages Actions. README and MAINTENANCE explain setup.
-- **No commit, push, live deployment, or remote Pages-settings change was performed.** The completed change is available for local review. Actual GitHub-hosted deployment requires publishing the repository changes and selecting Actions in Pages settings.
+- **The site is live.** After the user authorized upload, the changes were committed and pushed, Pages was configured to use GitHub Actions, and deployment succeeded. The first remote build exposed an overly broad `vendor/` ignore rule; changing it to `/vendor/` and committing `_sass/vendor/` fixed the build. Subsequent updates are deployed from `master`, with the latest run and public files checked after each release.
 
-## Verification
+## Initial migration verification
+
+For the later conference-link and consistency audit, see [the September 8 audit](docs/portfolio-audit-2026-09-08.md).
 
 - **Production build:** `BUNDLE_PATH=vendor/bundle JEKYLL_ENV=production bundle3.0 exec jekyll build --trace` — succeeded with Jekyll 3.10.0.
 - **Path compatibility:** production project baseurl and a separate `--baseurl ''` root-site build both passed `scripts/check_site.py`.
@@ -123,4 +125,4 @@ The Git remote and existing CV portfolio URL confirm a **project site**, not a u
 - **PDF:** regenerated with Tectonic from the edited source, four A4 pages with selectable text and working hyperlink annotations; viewed all pages, checked text extraction, no overflow/underflow layout warnings. A standard shell-escape-disabled package message is harmless; no shell escape is required.
 - **Diff hygiene:** `git diff --check` passes.
 
-Unverified optional information remains omitted: stroller dates/role, new academic social profiles, a separate 2025 KICS proceedings DOI, and the TNSM exact publication day. No task-blocking build/link failures remain. Native PDF behavior on physical iOS/Android devices and a live GitHub Actions deployment were not tested.
+Unverified optional information remains omitted: stroller dates/role, new academic social profiles, a 2025 KICS proceedings DOI, and the TNSM exact publication day. No task-blocking build/link failures remain. Native PDF behavior on physical iOS/Android devices was not tested. Live GitHub Actions deployment and public HTML, CSS, image, and PDF delivery have since been verified.

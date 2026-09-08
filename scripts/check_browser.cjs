@@ -6,7 +6,7 @@ const origin=process.env.SITE_URL || 'http://127.0.0.1:4000/portfolio_Hyeongjin_
  const results=[];let failures=[];
  for(const width of [320,390,768,1024,1440]){
   const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
-  for(const route of ['', 'research/','publications/','projects/','honors/','experience/','cv/','projects/smart-stroller/','publications/split-federated-dqn/']){
+  for(const route of ['', 'research/','publications/','projects/','honors/','experience/','cv/','projects/smart-stroller/','publications/split-federated-dqn/','publications/kics-2024/','publications/kics-2025/']){
    const errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(origin+route,{waitUntil:'networkidle'});
    await page.evaluate(async()=>{for(const im of document.images){im.loading='eager';}await Promise.all([...document.images].filter(im=>im.getAttribute('src')).map(im=>im.decode().catch(()=>{})));});

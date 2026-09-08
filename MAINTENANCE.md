@@ -78,11 +78,10 @@ The source is `Academic_CV/main.tex`. Compile it with your LaTeX installation, o
 ```sh
 mkdir -p /tmp/hyeongjin-cv-build
 tectonic Academic_CV/main.tex --outdir /tmp/hyeongjin-cv-build
-cp /tmp/hyeongjin-cv-build/main.pdf files/Hyeongjin_Kim_CV.pdf
-cp /tmp/hyeongjin-cv-build/main.pdf Academic_CV/Academic_CV.pdf
+python3 scripts/update_cv.py /tmp/hyeongjin-cv-build/main.pdf
 ```
 
-Replace **both** PDF copies with identical bytes. `/cv/` is the primary route; `/resume/` redirects there. The previous `Academic_CV/Academic_CV.pdf` URL remains available. Preserve searchable/selectable text and hyperlinks; do not replace the PDF with page screenshots. Check current affiliation, program, publication metadata, and dates against the website whenever updating the CV.
+The update script replaces **both** PDF copies with identical bytes and updates the version query on every inline/open/download link, so browsers fetch the new CV. `/cv/` is the primary route; `/resume/` redirects there. The previous `Academic_CV/Academic_CV.pdf` URL remains available. Preserve searchable/selectable text and hyperlinks; do not replace the PDF with page screenshots. Check current affiliation, program, publication metadata, and dates against the website whenever updating the CV. The first-page section spacing in `main.tex` is 18 pt before / 10 pt after headings; it resets to 8 pt / 6 pt before Projects. Keep all five publications on the first page when recompiling.
 
 `main_origin.tex` and the old auxiliary author PDF remain source archives and are excluded from the published output.
 
@@ -125,7 +124,7 @@ The verified target is the existing project site:
 - URL: `https://eliseegkart.github.io/portfolio_Hyeongjin_Kim/`
 - `_config.yml`: `url: https://eliseegkart.github.io`, `baseurl: /portfolio_Hyeongjin_Kim`
 
-In repository **Settings → Pages**, select **GitHub Actions** as the source. `.github/workflows/pages.yml` builds and checks pull requests, and deploys pushes to `main`/`master` or a manual workflow run. The migration session did not push or change remote settings.
+The site is live and **Settings → Pages → GitHub Actions** is configured. `.github/workflows/pages.yml` builds and checks pull requests, and deploys pushes to `main`/`master` or a manual workflow run. Confirm that the run for the latest commit succeeds and check the public page after deployment. `.gitignore` excludes only the root `/vendor/` dependency folder; `_sass/vendor/` must remain tracked because it contains the theme's Sass libraries.
 
 To use a username root site later, update repository/url and set `baseurl: ''`; update the workflow link-check baseurl argument too. A root-path build was also validated during migration.
 
