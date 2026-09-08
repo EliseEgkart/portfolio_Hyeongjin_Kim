@@ -175,8 +175,8 @@ figcaption { margin-top: 10px; color: var(--muted); font-size: 12px; font-style:
   .page__content h2, .archive h2 { font-size: 19px; }
   .section-heading { gap: 10px; } .section-heading > a { font-size: 11px; }
   .publication-row { grid-template-columns: minmax(0,1fr); gap: 14px; padding: 23px 0; }
-  .publication-image { height: 162px; justify-content: flex-start; padding: 12px; background: #fafcfd; }
-  .publication-image img { max-width: 310px; object-position: left center; }
+  .publication-image { height: 162px; justify-content: center; padding: 12px; background: #fafcfd; }
+  .publication-image img { max-width: 310px; object-position: center; }
   .publication-row h3 { font-size: 16px; } .publication-authors, .publication-venue { font-size: 12px; }
   .project-grid, .document-grid { grid-template-columns: minmax(0,1fr); }
   .project-body { padding: 18px; } .project-body h3 { font-size: 17px; }
