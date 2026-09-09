@@ -12,7 +12,7 @@ technologies:
 - OLED display
 - DC motor
 - Fusion 360
-image: /images/projects/tanghulu-maker.webp
+image: /images/projects/tanghulu-maker.webp?v=2e1715cf4756
 image_alt: Automated Tanghulu Manufacturing Machine — project image
 external_url: https://youtu.be/RuwLuphqz50
 external_label: Watch demonstration
