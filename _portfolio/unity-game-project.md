@@ -9,7 +9,7 @@ major: false
 summary: Three game prototypes exploring flight simulation, platforming, and top-down action.
 technologies:
 - Unity
-image: /images/projects/unity-game-project.webp
+image: /images/projects/unity-game-project.webp?v=ed03c8f41946
 image_alt: Unity Game Development — project image
 external_url: https://www.youtube.com/shorts/RJIRCw1mdC4
 external_label: Watch demonstration
