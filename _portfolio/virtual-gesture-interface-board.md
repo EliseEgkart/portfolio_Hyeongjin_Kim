@@ -13,7 +13,7 @@ technologies:
 - ml5.js HandPose
 - Webcam
 - OBS
-image: /images/projects/virtual-gesture-interface-board.webp
+image: /images/projects/virtual-gesture-interface-board.webp?v=e8fdab9d2441
 image_alt: Virtual Gesture Interface Board — project image
 external_url: https://github.com/EliseEgkart/ECS_Interactive_Reactions
 external_label: View GitHub repository
